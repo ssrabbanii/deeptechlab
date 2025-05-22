@@ -1,0 +1,299 @@
+Read the website structure and build each and every page is full details
+
+🧭 Website Structure
+Top Navigation (Navbar)
+Home
+
+
+About the Program
+
+
+For Participants
+
+
+For Partners
+
+
+Faculty & Speakers
+
+
+Schedule
+
+
+Apply / Nominate
+
+
+FAQs
+
+
+Contact
+
+
+
+🔹 1. Home Page
+Purpose: Quickly convey what this is, who it’s for, and why it matters.
+Content:
+Hero section:
+
+
+Tagline: "Empowering Deep-Tech Founders to Lead from Day One."
+
+
+CTA buttons: Apply Now | Nominate a Venture
+
+
+Quick Overview:
+
+
+“First-of-its-kind program in Hong Kong bridging tech and business leadership.”
+
+
+3-4 Value Highlights with Icons:
+
+
+Commercialization skills
+
+
+Fundraising confidence
+
+
+Real-world CXO mentorship
+
+
+Hybrid delivery model
+
+
+Logos of collaborating institutions (e.g., ORKTS, CfE)
+
+
+Testimonials (optional or placeholder)
+
+
+
+🔹 2. About the Program
+Purpose: Deep dive into the mission, origin, and impact.
+Content:
+Why this program matters (context on deep-tech challenges)
+
+
+Mission: bridging business acumen and tech expertise
+
+
+Who it’s designed for (tech founders, scientists, aspiring deep-tech CEOs)
+
+
+Partners: DTL, ORKTS, CfE, etc.
+
+
+Program benefits (bullet points)
+
+
+Callout box: “Delivered by academics, investors, and deep-tech entrepreneurs”
+
+
+
+🔹 3. For Participants
+Purpose: Explain what they’ll get, how it works, and how to join.
+Content:
+Who should apply (profiles, e.g., “PhD scientist working on spinouts”, “tech startup CTO transitioning to CEO role”)
+
+
+Learning outcomes:
+
+
+Commercialization paths
+
+
+Fundraising
+
+
+Go-to-market strategy
+
+
+Leadership development
+
+
+Format breakdown:
+
+
+Hybrid model
+
+
+2 weeks in-person / 2 online
+
+
+Workshops, case studies, group work
+
+
+Cost and funding info
+
+
+Individual: $2,000
+
+
+Venture: $3,600 (up to 3 members)
+
+
+“ORKTS covers 50%” (if applicable)
+
+
+CTA: Apply Now
+
+
+
+🔹 4. For Partners
+Purpose: Show how ORKTS and other institutions benefit and can get involved.
+Content:
+Why ORKTS and other innovation hubs are supporting this
+
+
+Value for partners:
+
+
+Upskilling founders → more successful spinoffs
+
+
+Filling leadership talent gap
+
+
+Building a deeper commercialization pipeline
+
+
+How partners nominate ventures
+
+
+Ways to support: sponsorship, speaker slots, content contributions
+
+
+Partner logos, past collaborations
+
+
+CTA: Partner with Us or Nominate a Venture
+
+
+
+🔹 5. Faculty & Speakers
+Purpose: Showcase credibility and draw interest via expert participation.
+Content:
+Profiles (images + short bios) of:
+
+
+Academics
+
+
+Industry experts
+
+
+Deep-tech CXOs
+
+
+Investors
+
+
+Quotes or videos if available
+
+
+Call for mentors/speakers: “Join the talent pool shaping Hong Kong’s deep tech future”
+
+
+
+🔹 6. Schedule
+Purpose: Transparent view of dates and format.
+Content:
+Key dates:
+
+
+July 5, 12, 19, Aug 28
+
+
+Delivery format:
+
+
+Week 1 & 4 – In-person workshops
+
+
+Week 2 & 3 – Online sessions
+
+
+Daily themes (if available in syllabus appendix)
+
+
+Downloadable tentative syllabus (PDF)
+
+
+
+🔹 7. Apply / Nominate
+Purpose: Funnel people into the program.
+Content:
+Form with fields:
+
+
+Name, email, role, organization
+
+
+Are you applying as an individual or venture?
+
+
+Resume upload
+
+
+Brief on your startup/project
+
+
+For ventures: ability to list 2 more team members
+
+
+Note on selection criteria
+
+
+Contact support if needed
+
+
+
+🔹 8. FAQs
+Purpose: Remove doubts, increase conversion.
+Content (sample questions):
+Who is eligible to apply?
+
+
+How do I get nominated through ORKTS?
+
+
+What’s included in the program cost?
+
+
+Can I attend if I’m overseas during the online weeks?
+
+
+What are expected time commitments?
+
+
+
+🔹 9. Contact
+Purpose: Direct line for inquiries.
+Content:
+Email contacts: Kevin Au / Victoria Wang
+
+
+Social links (if relevant)
+
+
+Short form: Name, Email, Message
+
+
+
+🧩 Extra Ideas
+Success Stories/Case Studies (future feature): once a few cohorts complete
+
+
+Blog / News: Announce launch, speaker features, articles on deep tech
+Build a website for The C-Suite Leadership Development Program for Deep-Tech Ventures is a pioneering executive education initiative aimed at shaping the next generation of business leaders within Hong Kong’s deep-tech ecosystem. Unlike traditional accelerator programs or startup bootcamps, this program is specifically built for scientists, engineers, and tech founders who are stepping into leadership roles such as CEO, CTO, or other CXO positions—but may lack formal business training.
+
+Developed by the Deep-Tech Lab in collaboration with the Centre for Entrepreneurship (CfE) and other leading academic institutions, and offered through ORKTS, this program addresses one of the biggest challenges in commercializing deep-tech: the gap between technical expertise and business leadership. Participants will undergo intensive training in commercialization, go-to-market strategy, business modeling, fundraising, and team leadership—all within the unique context and constraints of deep-tech ventures.
+
+Delivered over four key sessions using a hybrid format (two in-person and two online), the program combines academic insight, investor perspectives, and lived experience from successful deep-tech founders and CXOs. Through workshops, case studies, and collaborative simulations, participants will gain not only knowledge but also access to a strong peer network and mentor community.
+
+The program is especially relevant for ventures looking to scale from proof-of-concept (Phase 0) to early commercialization (Phase 1), and for institutional partners like ORKTS aiming to nurture high-potential tech spinouts. With limited slots available, participants are nominated through ORKTS and supported partially by institutional funding to keep the program accessible.
+
+In short, this is more than a leadership course—it's a catalytic experience designed to build deep-tech-ready C-Suites, strengthen Hong Kong’s innovation pipeline, and unlock the commercial potential of frontier technologies.llow the website structure to build me each and every page of the website and make sure it is mobile responsive.
+
