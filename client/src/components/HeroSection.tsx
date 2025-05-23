@@ -18,7 +18,7 @@ const HeroSection = () => {
               <img 
                 src={weAreHiringImage} 
                 alt="We're Hiring" 
-                className="w-20 h-auto mb-2 animate-pulse"
+                className="w-50 h-auto mb-2 animate-pulse"
               />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold leading-tight mb-4">
