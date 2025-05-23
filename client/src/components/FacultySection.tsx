@@ -58,7 +58,7 @@ const FacultySection = () => {
               <img
                 src={faculty.image}
                 alt={faculty.name}
-                className="w-full h-64 object-cover object-center"
+                className="w-full h-64 object-contain object-center"
               />
               <div className="p-4">
                 <h3 className="font-heading font-semibold text-lg">
