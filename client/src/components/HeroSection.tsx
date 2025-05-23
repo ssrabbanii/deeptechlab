@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { scrollToSection } from '@/lib/utils';
 import { Link } from 'wouter';
+import weAreHiringImage from '@assets/we are hiring.png';
 
 const HeroSection = () => {
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -13,6 +14,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
+            <div className="mb-4">
+              <img 
+                src={weAreHiringImage} 
+                alt="We're Hiring" 
+                className="w-20 h-auto mb-2 animate-pulse"
+              />
+            </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold leading-tight mb-4">
               Empowering Deep-Tech Founders to Lead from Day One.
             </h1>
