@@ -119,15 +119,15 @@ const Footer = () => {
                   href="mailto:info@dtl-hk.com" 
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  info@dtl-hk.com
+                  2025cohort@hkdeeptechlab.io 
                 </a>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <i className="fas fa-map-pin text-primary mr-2"></i>
                 <span className="text-gray-400">Hong Kong Science Park</span>
               </li>
-              <li>
-                <div className="flex space-x-3 mt-3">
+              <li> */}
+                {/* <div className="flex space-x-3 mt-3">
                   <a href="https://www.linkedin.com" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
@@ -140,8 +140,8 @@ const Footer = () => {
                   <a href="https://www.instagram.com" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-instagram"></i>
                   </a>
-                </div>
-              </li>
+                </div> */}
+              {/* </li> */}
             </ul>
           </div>
         </div>
