@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="bg-gradient-to-r from-primary to-blue-800 text-white py-16 md:py-24">
+    <section id="home" className="bg-gradient-to-r from-primary to-purple-900 text-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">

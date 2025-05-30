@@ -117,7 +117,7 @@ const Navbar = () => {
             href={isHomePage ? "#apply" : "/apply"}
             onClick={(e) => isHomePage && handleNavigation(e, "apply")}
           >
-            <Button className="hidden sm:block bg-gradient-to-r from-primary to-blue-700 hover:from-blue-700 hover:to-primary text-white font-medium transition-all hover:shadow-lg">
+            <Button className="hidden sm:block bg-gradient-to-r from-primary to-purple-700 hover:from-purple-700 hover:to-primary text-white font-medium transition-all hover:shadow-lg">
               Apply Now
             </Button>
           </Link>
@@ -157,7 +157,7 @@ const Navbar = () => {
                 href={isHomePage ? "#apply" : "/apply"}
                 onClick={(e) => isHomePage && handleNavigation(e, "apply")}
               >
-                <Button className="w-full bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium text-center">
+                <Button className="w-full bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md font-medium text-center">
                   Apply Now
                 </Button>
               </Link>
