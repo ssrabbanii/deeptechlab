@@ -152,7 +152,9 @@ const ApplicationSection = () => {
     <section id="apply" className="py-16 bg-primary bg-opacity-5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl font-bold mb-3">Apply Now</h2>
+          <h2 className="font-heading text-3xl font-bold mb-3 text-white">
+            Apply Now
+          </h2>
           <div className="section-divider mx-auto"></div>
           <p className="text-white max-w-3xl mx-auto mt-4">
             Ready to transform your technlology expertise into business
@@ -381,7 +383,7 @@ const ApplicationSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
+                  className="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
                 >
                   Submit Application
                 </Button>
@@ -400,7 +402,7 @@ const ApplicationSection = () => {
               </p>
 
               <Button
-                className="w-full bg-secondary hover:bg-pink-600 text-white text-center font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
+                className="w-full bg-primary hover:bg-secondary text-primary-foreground text-center font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
                 onClick={() => {
                   toast({
                     title: "Coming Soon",
@@ -428,7 +430,9 @@ const ApplicationSection = () => {
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                  <span>Commercialization potential with deep-tech ventures </span>
+                  <span>
+                    Commercialization potential with deep-tech ventures{" "}
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
@@ -441,7 +445,7 @@ const ApplicationSection = () => {
               </ul>
 
               <div className="mt-6 p-4 bg-primary bg-opacity-10 rounded-md">
-                <p className="font-medium">
+                <p className="font-medium text-white">
                   Applications are reviewed on a rolling basis. Early
                   application is encouraged as space is limited.
                 </p>

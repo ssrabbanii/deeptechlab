@@ -22,8 +22,8 @@ const PartnersSection = () => {
             <h3 className="font-heading text-xl font-semibold mt-6 mb-2">Why Support This Program</h3>
             <div className="space-y-4 mt-4">
               <div className="flex items-start">
-                <div className="bg-secondary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
-                  <i className="fas fa-rocket text-secondary"></i>
+                <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
+                  <i className="fas fa-rocket text-primary"></i>
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold">Upskilling Founders</h4>
@@ -32,8 +32,8 @@ const PartnersSection = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-secondary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
-                  <i className="fas fa-users text-secondary"></i>
+                <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
+                  <i className="fas fa-users text-primary"></i>
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold">Filling Leadership Gaps</h4>
@@ -42,8 +42,8 @@ const PartnersSection = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-secondary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
-                  <i className="fas fa-chart-bar text-secondary"></i>
+                <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
+                  <i className="fas fa-chart-bar text-primary"></i>
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold">Building Commercialization Pipeline</h4>
@@ -54,7 +54,7 @@ const PartnersSection = () => {
             
             <div className="mt-8">
               <Link href="#contact" onClick={(e) => handleNavigation(e, 'contact')}>
-                <Button className="bg-secondary hover:bg-pink-600 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg inline-flex items-center h-auto">
+                <Button className="bg-primary hover:bg-secondary text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg inline-flex items-center h-auto">
                   Partner With Us
                   <i className="fas fa-arrow-right ml-2"></i>
                 </Button>
@@ -92,7 +92,7 @@ const PartnersSection = () => {
               
               <div className="mt-6">
                 <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
-                  <Button variant="link" className="text-secondary font-medium hover:underline flex items-center p-0 h-auto">
+                  <Button variant="link" className="text-primary font-medium hover:underline flex items-center p-0 h-auto">
                     Nominate a Venture
                     <i className="fas fa-arrow-right ml-2"></i>
                   </Button>
