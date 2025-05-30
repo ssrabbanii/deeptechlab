@@ -20,35 +20,33 @@ const ParticipantsSection = () => {
           </h2>
           <div className="section-divider mx-auto"></div>
           <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-            Gain the essential skills and knowledge to lead your deep-tech
-            venture to commercial success.
+            Gain the essential skills and knowledge to lead your deep-tech venture to commercial success.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Who Should Apply */}
           <div className="bg-light rounded-lg p-6 shadow-sm">
             <h3 className="font-heading text-xl font-semibold mb-4">
               Who Should Apply
             </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>PhD scientists working on spinouts</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Technical CTOs transitioning to CEO roles</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Deep-tech founders seeking business acumen</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Research teams commercializing innovations</span>
-              </li>
-            </ul>
+            <div className="mb-4">
+              <h4 className="font-semibold text-primary mb-2">Technology Track</h4>
+              <ul className="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Scientists working on spinouts</li>
+                <li>Post-docs and Technical CTOs transitioning into CEO/COO roles</li>
+                <li>Deep-tech founders seeking to strengthen their business acumen</li>
+                <li>Research teams aiming to commercialize their innovations</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-primary mb-2">Business Track</h4>
+              <ul className="space-y-2 text-gray-600 list-disc list-inside">
+                <li>Experienced business leaders/entrepreneurs looking for new challenges</li>
+                <li>Business graduates with start-up career ambition</li>
+                <li>Second-generation family talent aspiring to become CXOs in deep tech ventures</li>
+              </ul>
+            </div>
           </div>
 
           {/* Learning Outcomes */}
@@ -56,23 +54,13 @@ const ParticipantsSection = () => {
             <h3 className="font-heading text-xl font-semibold mb-4">
               Learning Outcomes
             </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Strategic commercialization pathways</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Effective fundraising techniques</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Go-to-market strategy development</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Leadership and team management</span>
-              </li>
+            <ul className="space-y-2 text-gray-600 list-disc list-inside">
+              <li>Understanding of Deep-Tech Ecosystems</li>
+              <li>Strategic Commercialization Pathways</li>
+              <li>Effective Fundraising and Growth Strategies</li>
+              <li>Go-to-market Strategy Development</li>
+              <li>Leadership and Team Management</li>
+              <li>Start off Mindset Shift towards Deep-tech Ventures</li>
             </ul>
           </div>
 
@@ -81,89 +69,63 @@ const ParticipantsSection = () => {
             <h3 className="font-heading text-xl font-semibold mb-4">
               Program Format
             </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Hybrid model: in-person and online</span>
+            <ul className="space-y-2 text-gray-600 list-disc list-inside">
+              <li>Hybrid model: in-person and online</li>
+              <li>2 weeks in-person, 2 weeks online</li>
+              <li>Interactive Workshops, Case Studies, Group Exercises, Simulations, Reflections, and Mixed Group Activities</li>
+              <li>Networking with Successful Deep-Tech CXOs, Investors, Industry Experts and Mentors</li>
+            </ul>
+          </div>
+
+          {/* Program Cost & Funding */}
+          <div className="bg-light rounded-lg p-6 shadow-sm">
+            <h3 className="font-heading text-xl font-semibold mb-4">
+              Program Cost & Funding
+            </h3>
+            <p className="text-gray-600 mb-4">
+              We keep the program accessible through partner subsidies and flexible pricing for individuals and ventures.
+            </p>
+            <ul className="text-gray-700 mb-4">
+              <li className="flex justify-between py-2 border-b border-gray-200">
+                <span>Individual Participant</span>
+                <span className="font-heading font-bold text-xl">$2,000</span>
               </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>2 weeks in-person, 2 weeks online</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Workshops, case studies, group work</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check-circle text-success mt-1 mr-2"></i>
-                <span>Networking with investors and mentors</span>
+              <li className="flex justify-between py-2 border-b border-gray-200">
+                <span>Venture (up to 3 members)</span>
+                <span className="font-heading font-bold text-xl">$3,600</span>
               </li>
             </ul>
+            <div className="bg-accent bg-opacity-10 text-dark p-4 rounded-md">
+              <p className="font-medium">
+                A partner institution may cover a part of the costs for eligible participants. For more details, please contact us.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-primary bg-opacity-5 rounded-xl p-8 md:p-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-heading text-2xl font-semibold mb-4">
-                Program Cost & Funding
-              </h3>
-              <p className="text-white mb-6">
-                We keep the program accessible through partner subsidies and
-                flexible pricing for individuals and ventures.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="font-medium">Individual Participant</span>
-                  <span className="font-heading font-bold text-xl">$2,000</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="font-medium">Venture (up to 3 members)</span>
-                  <span className="font-heading font-bold text-xl">$3,600</span>
-                </div>
-                <div className="bg-accent bg-opacity-10 text-dark p-4 rounded-md">
-                  <p className="font-medium">
-                    ORKTS covers 50% of costs for eligible participants!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="font-heading text-xl font-semibold mb-4">
-                Ready to transform your leadership?
-              </h4>
-              <p className="text-gray-600 mb-6">
-                Limited slots available for our next cohort. Apply now or reach
-                out with questions.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="#apply"
-                  onClick={(e) => handleNavigation(e, "apply")}
-                >
-                  <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
-                    Apply Now
-                  </Button>
-                </Link>
-                <Link
-                  href="#contact"
-                  onClick={(e) => handleNavigation(e, "contact")}
-                >
-                  <Button
-                    variant="outline"
-                    className="border border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-md font-heading font-semibold transition-all h-auto"
-                  >
-                    Contact Us
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        <div className="mt-12 text-center">
+          <h4 className="font-heading text-2xl font-semibold mb-4">
+            Ready to transform your leadership?
+          </h4>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Limited slots available for our upcoming cohort. Apply now or contact us to learn more.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="#apply" onClick={(e) => handleNavigation(e, "apply")}> 
+              <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+                Apply Now
+              </Button>
+            </Link>
+            <Link href="#contact" onClick={(e) => handleNavigation(e, "contact")}> 
+              <Button variant="outline" className="border border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-md font-heading font-semibold transition-all h-auto">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
+
   );
 };
 

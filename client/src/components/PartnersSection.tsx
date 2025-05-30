@@ -16,7 +16,7 @@ const PartnersSection = () => {
             <h2 className="font-heading text-3xl font-bold mb-3">For Partners</h2>
             <div className="section-divider"></div>
             <p className="text-gray-600 my-4">
-              Our institutional partners play a crucial role in developing Hong Kong's deep-tech ecosystem by supporting future tech leaders.
+              Our institutional partners play a crucial role in developing Hong Kong's deep-tech ecosystem by supporting future tech leaders.   
             </p>
             
             <h3 className="font-heading text-xl font-semibold mt-6 mb-2">Why Support This Program</h3>
@@ -27,7 +27,7 @@ const PartnersSection = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold">Upskilling Founders</h4>
-                  <p className="text-gray-600">Create more successful spinoffs and tech ventures from your institution.</p>
+                  <p className="text-gray-600">Drive more successful spinouts and tech ventures from your institution. </p>
                 </div>
               </div>
               

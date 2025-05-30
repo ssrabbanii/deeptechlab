@@ -79,7 +79,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <div className="bg-primary bg-opacity-10 w-12 h-12 flex items-center justify-center rounded-full shrink-0 mr-4">
                   <i className="fas fa-map-marker-alt text-primary text-xl"></i>
                 </div>
@@ -87,9 +87,9 @@ const ContactSection = () => {
                   <h3 className="font-heading font-semibold text-lg">Location</h3>
                   <p className="text-gray-600">Center for Entrepreneurship<br />Hong Kong Science Park<br />Shatin, Hong Kong</p>
                 </div>
-              </div>
+              </div> */}
               
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <div className="bg-primary bg-opacity-10 w-12 h-12 flex items-center justify-center rounded-full shrink-0 mr-4">
                   <i className="fas fa-user text-primary text-xl"></i>
                 </div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
                   <p className="text-gray-600">Dr. Kevin Au - Program Director</p>
                   <p className="text-gray-600">Victoria Wang - Admissions Coordinator</p>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <div className="mt-8">
