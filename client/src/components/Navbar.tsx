@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { scrollToSection } from '@/lib/utils';
+import deepTechLabLogo from '@assets/image_1748578606438.png';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,7 +60,11 @@ const Navbar = () => {
     <header className={`bg-white shadow-md fixed w-full top-0 z-50 transition-shadow ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="bg-primary text-white p-1 rounded font-heading font-bold text-xl">DTL</span>
+          <img 
+            src={deepTechLabLogo} 
+            alt="Deep-Tech Lab" 
+            className="h-10 w-auto"
+          />
           <span className="text-dark font-heading font-semibold text-lg hidden sm:block">C-Suite Leadership Program</span>
         </Link>
         

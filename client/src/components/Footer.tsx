@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { useLocation } from 'wouter';
 import { scrollToSection } from '@/lib/utils';
+import deepTechLabLogo from '@assets/image_1748578606438.png';
 
 const Footer = () => {
   const [location] = useLocation();
@@ -19,7 +20,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="bg-white text-primary p-1 rounded font-heading font-bold text-xl">DTL</span>
+              <img 
+                src={deepTechLabLogo} 
+                alt="Deep-Tech Lab" 
+                className="h-8 w-auto"
+              />
               <span className="font-heading font-semibold text-lg">C-Suite Program</span>
             </div>
             <p className="text-gray-400">Empowering deep-tech founders with the business acumen to lead successful ventures.</p>
