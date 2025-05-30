@@ -33,11 +33,11 @@ const HeroSection = () => {
                   Apply Now
                 </Button>
               </Link>
-              <Link href="#partners" onClick={(e) => handleNavigation(e, 'partners')}>
+              {/* <Link href="#partners" onClick={(e) => handleNavigation(e, 'partners')}>
                 <Button variant="outline" className="bg-white bg-opacity-20 hover:bg-opacity-30 border border-white px-6 py-6 rounded-md font-heading font-semibold text-base transition-all text-white h-auto">
                   Nominate a Venture
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="order-1 md:order-2">

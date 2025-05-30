@@ -18,7 +18,7 @@ const facultyMembers = [
       "https://media.licdn.com/dms/image/v2/C4D03AQEEC0tjs4fK7w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516764841662?e=1753920000&v=beta&t=NniwmU7PcFSd1MSkFmZk1DKDZ1k_sMPj6xYAYdMM4SY",
   },
   {
-    name: "Olivier Cotard",
+    name: "Mr. Olivier Cotard",
     role: "",
     bio: "Olivier is a global entrepreneur and strategist with deep operational leadership in tech, manufacturing, and innovation across Asia, Europe, and the US. Founder of 3C Ventures and EU deep-tech evaluator, he mentors startups and leads the ATEC Startup Competition with a focus on scalable innovation.",
     image:
