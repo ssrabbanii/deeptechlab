@@ -127,7 +127,7 @@ const ContactSection = () => {
               </div> */}
             </div>
 
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <h3 className="font-heading font-semibold text-lg mb-4">
                 Connect With Us
               </h3>
@@ -169,7 +169,7 @@ const ContactSection = () => {
                   <i className="fab fa-instagram"></i>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
