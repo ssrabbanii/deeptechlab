@@ -270,7 +270,7 @@ const ContactSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
+                  className="w-full bg-primary hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg h-auto"
                 >
                   Send Message
                 </Button>

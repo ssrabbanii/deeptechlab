@@ -61,7 +61,7 @@ const ForParticipants = () => {
               
               <div className="mt-8">
                 <Link href="/apply">
-                  <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg w-full h-auto">
+                  <Button className="bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg w-full h-auto">
                     Apply Now
                   </Button>
                 </Link>

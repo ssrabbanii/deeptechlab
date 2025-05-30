@@ -117,7 +117,7 @@ const Schedule = () => {
                   </Button>
                   
                   <Link href="/apply">
-                    <Button className="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+                    <Button className="w-full bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
                       Apply Now
                     </Button>
                   </Link>

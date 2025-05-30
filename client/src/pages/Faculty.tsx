@@ -108,7 +108,7 @@ const Faculty = () => {
               We're always looking for experienced professionals to join our roster of speakers and mentors. Share your expertise and help shape the next generation of deep-tech leaders.
             </p>
             <Link href="/contact">
-              <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+              <Button className="bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
                 Apply to Become a Speaker
               </Button>
             </Link>

@@ -107,7 +107,7 @@ const FAQSection = () => {
             Don't see your question answered here?
           </p>
           <Link href="#contact" onClick={(e) => handleNavigation(e, "contact")}>
-            <Button className="inline-flex items-center bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+            <Button className="inline-flex items-center bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
               Contact Us
               <i className="fas fa-arrow-right ml-2"></i>
             </Button>

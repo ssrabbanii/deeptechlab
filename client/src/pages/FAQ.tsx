@@ -30,7 +30,7 @@ const FAQ = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link href="/contact">
-              <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+              <Button className="bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
                 Contact Our Team
               </Button>
             </Link>

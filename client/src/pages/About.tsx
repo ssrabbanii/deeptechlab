@@ -32,7 +32,7 @@ const About = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/apply">
-              <Button className="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
+              <Button className="bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-md font-heading font-semibold transition-all hover:shadow-lg h-auto">
                 Apply Now
               </Button>
             </Link>

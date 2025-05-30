@@ -77,7 +77,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <Link href="/register-info-session">
-                    <button className="mt-4 bg-primary hover:bg-blue-700 text-white py-2 px-4 rounded-md font-medium transition-all">
+                    <button className="mt-4 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-md font-medium transition-all">
                       Register Now
                     </button>
                   </Link>
