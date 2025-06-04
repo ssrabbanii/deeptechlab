@@ -105,7 +105,7 @@ const Navbar = () => {
               <a
                 href={item.href}
                 className="nav-link text-gray-700 hover:text-primary font-medium"
-                onClick={(e) => handleNavigation(e, item.sectionId)}
+                onClick={(e) => item.sectionId ? handleNavigation(e, item.sectionId) : closeMobileMenu()}
               >
                 {item.label}
               </a>
@@ -147,7 +147,7 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   className="block py-2 text-gray-700 hover:text-primary font-medium"
-                  onClick={(e) => handleNavigation(e, item.sectionId)}
+                  onClick={(e) => item.sectionId ? handleNavigation(e, item.sectionId) : closeMobileMenu()}
                 >
                   {item.label}
                 </a>
