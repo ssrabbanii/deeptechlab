@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="py-12 bg-gray-50">
+      {/* <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
           <div className="section-divider"></div>
@@ -17,7 +17,7 @@ const Contact = () => {
             Have questions or need more information about our program? Our team is here to help. Reach out using the form below or contact us directly.
           </p>
         </div>
-      </div>
+      </div> */}
       
       <ContactSection />
       

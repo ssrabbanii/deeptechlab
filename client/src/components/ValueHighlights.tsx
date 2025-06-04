@@ -18,8 +18,8 @@ const ValueHighlights = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Mastery of Critical Skills */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-brain text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-brain text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Mastery of Critical Skills
@@ -33,8 +33,8 @@ const ValueHighlights = () => {
 
           {/* Enterprise Leadership Capabilities */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-users text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-users text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Enterprise Leadership Capabilities
@@ -47,8 +47,8 @@ const ValueHighlights = () => {
 
           {/* Ecosystem Thinking */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-network-wired text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-network-wired text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Ecosystem Thinking
@@ -61,8 +61,8 @@ const ValueHighlights = () => {
 
           {/* Fundraising Confidence */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-hand-holding-usd text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-hand-holding-usd text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Fundraising Confidence
@@ -75,8 +75,8 @@ const ValueHighlights = () => {
 
           {/* Real-world CXO Mentorship */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-user-tie text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-user-tie text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Real-world CXO Mentorship
@@ -89,8 +89,8 @@ const ValueHighlights = () => {
 
           {/* Networking and Job-Matching Opportunities */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-handshake text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-handshake text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Networking & Job Matching
@@ -103,8 +103,8 @@ const ValueHighlights = () => {
 
           {/* Hybrid Delivery Model */}
           <div className="bg-light rounded-lg p-6 hover-scale shadow-sm">
-            <div className="bg-primary bg-opacity-10 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-              <i className="fas fa-laptop-house text-primary text-2xl"></i>
+            <div className="bg-gray-100 p-3 inline-flex items-center justify-center rounded-md shadow-sm mb-4">
+              <i className="fas fa-laptop-house text-primary text-xl"></i>
             </div>
             <h3 className="font-heading text-xl font-semibold mb-2">
               Hybrid Delivery Model

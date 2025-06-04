@@ -10,7 +10,7 @@ const ForParticipants = () => {
 
   return (
     <>
-      <div className="py-12 bg-gray-50">
+      {/* <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-3xl md:text-4xl font-bold mb-4">For Participants</h1>
           <div className="section-divider"></div>
@@ -18,7 +18,7 @@ const ForParticipants = () => {
             Discover how our program can help you gain the business acumen needed to successfully lead deep-tech ventures.
           </p>
         </div>
-      </div>
+      </div> */}
       
       <ParticipantsSection />
       

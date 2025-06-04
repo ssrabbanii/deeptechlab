@@ -7,7 +7,6 @@ import ForPartners from "@/pages/ForPartners";
 import Faculty from "@/pages/Faculty";
 import Schedule from "@/pages/Schedule";
 import Apply from "@/pages/Apply";
-import Register from "@/pages/Register";
 import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/faculty" component={Faculty} />
         <Route path="/schedule" component={Schedule} />
         <Route path="/apply" component={Apply} />
-        <Route path="/register" component={Register} />
         <Route path="/faq" component={FAQ} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />

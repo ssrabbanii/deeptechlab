@@ -25,6 +25,13 @@ const facultyMembers = [
       "https://static.wixstatic.com/media/fc0576_7d51f6680b304fe6aa4fe09fe32cdec7~mv2.jpg/v1/crop/x_0,y_0,w_400,h_320/fill/w_559,h_448,al_c,lg_1,q_80,enc_avif,quality_auto/Olivier%20Cotard.jpg",
   },
   {
+    name: "Dr. Sidney Tam",
+    role: "",
+    bio: "With 40+ years in MNCs and China’s corporate scene, Dr. Tam brings deep expertise in cross-border innovation across biotech, media, Industry 4.0, healthcare, and venture finance. As CEO of Reanda Consulting and co-founder of LifeHealth Group, he has led four companies through IPOs and M&As. A seasoned leader, strategic advisor, and startup mentor, he drives transformation across Asia’s innovation ecosystem.",
+    image:
+      "https://static.wixstatic.com/media/fc0576_f94a77c69a4d4c5b98dc03a2aebd5398~mv2.jpg/v1/fill/w_378,h_302,al_c,lg_1,q_80,enc_avif,quality_auto/Sidney%20CV%202024%20WBI%20International_edited.jpg",
+  },
+  {
     name: "Dr. Victoria Jian Wang",
     role: "",
     bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Dr. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and adjunct associate professor in management at CUHK, she mentors C-suite leaders and women executives globally. ",
@@ -56,7 +63,7 @@ const FacultySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {facultyMembers.map((faculty, index) => (
             <div
               key={index}
