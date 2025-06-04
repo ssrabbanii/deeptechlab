@@ -124,7 +124,7 @@ const Footer = () => {
                   href="mailto:info@dtl-hk.com" 
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  2025cohort@hkdeeptechlab.io 
+                  admin@hkdeeptechlab.io
                 </a>
               </li>
               {/* <li className="flex items-center">

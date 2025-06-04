@@ -322,7 +322,7 @@ const ContactSection = () => {
                       href="mailto:2025cohort@hkdeeptechlab.io"
                       className="text-primary hover:underline"
                     >
-                      2025cohort@hkdeeptechlab.io
+                      admin@hkdeeptechlab.io
                     </a>
                   </p>
                 </div>

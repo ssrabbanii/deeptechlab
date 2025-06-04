@@ -57,7 +57,7 @@ const AboutSection = () => {
             </h3>
             <div className="text-gray-600 space-y-4">
               <div>
-                <strong className="block text-lg mb-1">Technology Track</strong>
+                <strong className="block text-lg mb-1">Ventures Track</strong>
                 <p>
                   Designed specifically for deep-tech scientist-founders, their
                   science team, and aspiring deep-tech CXOs who possess
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 </p>
               </div>
               <div>
-                <strong className="block text-lg mb-1">Business Track</strong>
+                <strong className="block text-lg mb-1">CXOs Track</strong>
                 <p>
                   Designed specifically for experienced business leaders and
                   entrepreneurs, enterprising family business members who aspire
