@@ -23,9 +23,9 @@ const Navbar = () => {
   // Handle navigation depending on whether we're on homepage or not
   const handleNavigation = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
+    sectionId: string | null,
   ) => {
-    if (isHomePage) {
+    if (isHomePage && sectionId) {
       e.preventDefault();
       scrollToSection(sectionId);
       closeMobileMenu();
@@ -75,6 +75,7 @@ const Navbar = () => {
       label: "Schedule",
       sectionId: "schedule",
     },
+    { href: "/register", label: "Register", sectionId: null },
     { href: isHomePage ? "#faq" : "/faq", label: "FAQs", sectionId: "faq" },
     {
       href: isHomePage ? "#contact" : "/contact",
