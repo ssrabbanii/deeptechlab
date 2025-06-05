@@ -10,6 +10,14 @@ const facultyMembers = [
     image:
       "https://www.bschool.cuhk.edu.hk/wp-content/uploads/AU-Kevin_thumb.jpg",
   },
+
+  {
+    name: "Mr. Olivier Cotard",
+    role: "",
+    bio: "Olivier is a global entrepreneur and strategist with deep operational leadership in tech, manufacturing, and innovation across Asia, Europe, and the US. Founder of 3C Ventures and EU deep-tech evaluator, he mentors startups and leads the ATEC Startup Competition with a focus on scalable innovation.",
+    image:
+      "https://static.wixstatic.com/media/fc0576_7d51f6680b304fe6aa4fe09fe32cdec7~mv2.jpg/v1/crop/x_0,y_0,w_400,h_320/fill/w_559,h_448,al_c,lg_1,q_80,enc_avif,quality_auto/Olivier%20Cotard.jpg",
+  },
   {
     name: "Dr. Marta Dowejko",
     role: "",
@@ -18,12 +26,11 @@ const facultyMembers = [
       "https://media.licdn.com/dms/image/v2/C4D03AQEEC0tjs4fK7w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516764841662?e=1753920000&v=beta&t=NniwmU7PcFSd1MSkFmZk1DKDZ1k_sMPj6xYAYdMM4SY",
   },
   {
-    name: "Mr. Olivier Cotard",
+    name: "Mr. Keenan Kwok",
     role: "",
-    bio: "Olivier is a global entrepreneur and strategist with deep operational leadership in tech, manufacturing, and innovation across Asia, Europe, and the US. Founder of 3C Ventures and EU deep-tech evaluator, he mentors startups and leads the ATEC Startup Competition with a focus on scalable innovation.",
-    image:
-      "https://static.wixstatic.com/media/fc0576_7d51f6680b304fe6aa4fe09fe32cdec7~mv2.jpg/v1/crop/x_0,y_0,w_400,h_320/fill/w_559,h_448,al_c,lg_1,q_80,enc_avif,quality_auto/Olivier%20Cotard.jpg",
-  },
+    bio: "Keenan Kwok is the Group CEO of GetLinks, Asia’s leading curated tech hiring marketplace operating across Hong Kong, Singapore, Thailand, Vietnam, and Indonesia. A serial entrepreneur and angel investor, he also serves as Co-founder of Aera VC, Founder of AsiaStartups, and advisor to multiple tech and manufacturing companies. With a career spanning investment banking at Deutsche Bank to scaling startups and venture funds, he is a recognized force in building Asia’s digital and innovation ecosystem.",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQFesd6oypUWIQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1564815364207?e=1754524800&v=beta&t=UAPo1mcvilYROjxWFZuZtzynrzH3qDLHMoTmDJbtnqQ"
+  }
   {
     name: "Dr. Sidney Tam",
     role: "",
@@ -38,6 +45,8 @@ const facultyMembers = [
     image:
       "https://static.wixstatic.com/media/fc0576_3bd63deeb7e14b98aa7ef01df377a56b~mv2.jpg/v1/fill/w_914,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-26%20at%205_40_edited.jpg",
   },
+
+
 ];
 
 const FacultySection = () => {
@@ -63,7 +72,7 @@ const FacultySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {facultyMembers.map((faculty, index) => (
             <div
               key={index}
