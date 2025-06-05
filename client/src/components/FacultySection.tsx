@@ -30,7 +30,7 @@ const facultyMembers = [
     role: "",
     bio: "Keenan Kwok is the Group CEO of GetLinks, Asia’s leading curated tech hiring marketplace operating across Hong Kong, Singapore, Thailand, Vietnam, and Indonesia. A serial entrepreneur and angel investor, he also serves as Co-founder of Aera VC, Founder of AsiaStartups, and advisor to multiple tech and manufacturing companies. With a career spanning investment banking at Deutsche Bank to scaling startups and venture funds, he is a recognized force in building Asia’s digital and innovation ecosystem.",
     image: "https://media.licdn.com/dms/image/v2/C5103AQFesd6oypUWIQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1564815364207?e=1754524800&v=beta&t=UAPo1mcvilYROjxWFZuZtzynrzH3qDLHMoTmDJbtnqQ"
-  }
+  },
   {
     name: "Dr. Sidney Tam",
     role: "",
