@@ -1,13 +1,16 @@
-import { Link } from 'wouter';
-import { useLocation } from 'wouter';
-import { scrollToSection } from '@/lib/utils';
-import deepTechLabLogo from '@assets/image_1748578606438.png';
+import { Link } from "wouter";
+import { useLocation } from "wouter";
+import { scrollToSection } from "@/lib/utils";
+import deepTechLabLogo from "@assets/image_1748578606438.png";
 
 const Footer = () => {
   const [location] = useLocation();
-  const isHomePage = location === '/';
+  const isHomePage = location === "/";
 
-  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
     if (isHomePage) {
       e.preventDefault();
       scrollToSection(sectionId);
@@ -20,91 +23,100 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src={deepTechLabLogo} 
-                alt="Deep-Tech Lab" 
+              <img
+                src={deepTechLabLogo}
+                alt="Deep-Tech Lab"
                 className="h-8 w-auto"
               />
-              <span className="font-heading font-semibold text-lg">C-Suite Program</span>
+              <span className="font-heading font-semibold text-lg">
+                C-Suite Program
+              </span>
             </div>
-            <p className="text-gray-400">Empowering deep-tech founders with the business acumen to lead successful ventures.</p>
+            <p className="text-gray-400">
+              Empowering deep-tech founders with the business acumen to lead
+              successful ventures.
+            </p>
           </div>
-          
+
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href={isHomePage ? '#home' : '/'} 
+                <a
+                  href={isHomePage ? "#home" : "/"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'home')}
+                  onClick={(e) => handleNavigation(e, "home")}
                 >
                   Home
                 </a>
               </li>
               <li>
-                <a 
-                  href={isHomePage ? '#about' : '/about'} 
+                <a
+                  href={isHomePage ? "#about" : "/about"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'about')}
+                  onClick={(e) => handleNavigation(e, "about")}
                 >
                   About
                 </a>
               </li>
               <li>
-                <a 
-                  href={isHomePage ? '#participants' : '/for-participants'} 
+                <a
+                  href={isHomePage ? "#participants" : "/for-participants"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'participants')}
+                  onClick={(e) => handleNavigation(e, "participants")}
                 >
                   For Participants
                 </a>
               </li>
               <li>
-                <a 
-                  href={isHomePage ? '#partners' : '/for-partners'} 
+                <a
+                  href={isHomePage ? "#partners" : "/for-partners"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'partners')}
+                  onClick={(e) => handleNavigation(e, "partners")}
                 >
                   For Partners
                 </a>
               </li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Resources</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">
+              Resources
+            </h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href={isHomePage ? '#faculty' : '/faculty'} 
+                <a
+                  href={isHomePage ? "#faculty" : "/faculty"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'faculty')}
+                  onClick={(e) => handleNavigation(e, "faculty")}
                 >
                   Faculty & Speakers
                 </a>
               </li>
               <li>
-                <a 
-                  href={isHomePage ? '#schedule' : '/schedule'} 
+                <a
+                  href={isHomePage ? "#schedule" : "/schedule"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'schedule')}
+                  onClick={(e) => handleNavigation(e, "schedule")}
                 >
                   Program Schedule
                 </a>
               </li>
               <li>
-                <a 
-                  href={isHomePage ? '#faq' : '/faq'} 
+                <a
+                  href={isHomePage ? "#faq" : "/faq"}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => handleNavigation(e, 'faq')}
+                  onClick={(e) => handleNavigation(e, "faq")}
                 >
                   FAQs
                 </a>
               </li>
               <li>
-                <a 
-                  href="/files/syllabus.pdf" 
+                <a
+                  href="/files/syllabus.pdf"
                   className="text-gray-400 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -114,14 +126,14 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <i className="fas fa-envelope text-primary mr-2"></i>
-                <a 
-                  href="mailto:info@dtl-hk.com" 
+                <a
+                  href="mailto:info@dtl-hk.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   admin@hkdeeptechlab.io
@@ -132,7 +144,7 @@ const Footer = () => {
                 <span className="text-gray-400">Hong Kong Science Park</span>
               </li>
               <li> */}
-                {/* <div className="flex space-x-3 mt-3">
+              {/* <div className="flex space-x-3 mt-3">
                   <a href="https://www.linkedin.com" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
@@ -150,13 +162,16 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Deep-Tech Lab Hong Kong. All rights reserved.</p>
-          <div className="flex justify-center space-x-4 mt-2">
+          <p>
+            &copy; {new Date().getFullYear()} Deep-Tech Lab Hong Kong. All
+            rights reserved.
+          </p>
+          {/* <div className="flex justify-center space-x-4 mt-2">
             <a href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-gray-300 transition-colors">Terms of Service</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
