@@ -1,50 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
-
-// Extend window object for Typeform
-declare global {
-  interface Window {
-    tf?: {
-      createPopup: (formId: string) => {
-        open: () => void;
-      };
-    };
-  }
-}
 
 const ScheduleSection = () => {
-  // Load Typeform embed script
-  useEffect(() => {
-    // Check if script is already loaded
-    if (document.querySelector('script[src*="embed.typeform.com"]')) {
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
-    script.async = true;
-    document.head.appendChild(script);
-
-    // No cleanup needed as the script should persist
-  }, []);
-
-  // Handle syllabus download - opens Typeform popup
+  // Download syllabus handler
   const handleDownloadSyllabus = () => {
-    // Create and trigger the Typeform popup
-    const tf = (window as any).tf;
-    if (tf) {
-      tf.createPopup('01JXETGQT5JP073CBZW99VT153').open();
-    } else {
-      // Fallback if Typeform script hasn't loaded yet
-      setTimeout(() => {
-        const tfRetry = (window as any).tf;
-        if (tfRetry) {
-          tfRetry.createPopup('01JXETGQT5JP073CBZW99VT153').open();
-        } else {
-          alert('Please try again in a moment while the form loads.');
-        }
-      }, 1000);
-    }
+    // In a real app, this would be a link to an actual PDF
+    // For this example, we'll just show a message
+    alert("Syllabus downloaded!");
   };
 
   return (
@@ -77,7 +38,7 @@ const ScheduleSection = () => {
                     Ventures Track Class: July 5, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 2, 2025
+                    Business Track Class: August 2, 2025
                   </p>
                   <p className="text-gray-600">
                     Intensive workshops covering business fundamentals,
@@ -101,7 +62,7 @@ const ScheduleSection = () => {
                     Ventures Track Class: July 12, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 9, 2025
+                    Business Track Class: August 9, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual learning modules on fundraising strategies, pitch
@@ -125,7 +86,7 @@ const ScheduleSection = () => {
                     Ventures Track Class: July 19, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 16, 2025
+                    Business Track Class: August 16, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual sessions on go-to-market strategy, team building,
@@ -142,7 +103,7 @@ const ScheduleSection = () => {
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm flex-1">
                   <h3 className="font-heading font-semibold text-lg">
-                    Week 4: In-Person Finale (for both Ventures and CXOs tracks)
+                    Week 4: In-Person Finale (for both tech and business tracks)
                   </h3>
 
                   <p className="text-primary mb-2 font-medium">
