@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
+import syllabusFile from "@assets/Course Syllabus Overview Scientists Track and Business Leaders Track June 2025_1749623282882.pdf";
 
 const ScheduleSection = () => {
   // Download syllabus handler
   const handleDownloadSyllabus = () => {
-    // In a real app, this would be a link to an actual PDF
-    // For this example, we'll just show a message
-    alert("Syllabus downloaded!");
+    const link = document.createElement('a');
+    link.href = syllabusFile;
+    link.download = 'Course-Syllabus-Deep-Tech-Leadership-Program.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
