@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const ScheduleSection = () => {
   // Download syllabus handler
   const handleDownloadSyllabus = () => {
-    // In a real app, this would be a link to an actual PDF
-    // For this example, we'll just show a message
-    alert("Syllabus downloaded!");
+    window.open("https://form.typeform.com/to/mFgZKXFn", "_blank");
   };
 
   return (
@@ -21,7 +20,6 @@ const ScheduleSection = () => {
               Our program is designed to maximize learning while accommodating
               the busy schedules of working professionals.
             </p>
-
             <div className="mt-8 space-y-6">
               <div className="flex">
                 <div className="mr-4">
@@ -46,7 +44,6 @@ const ScheduleSection = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
@@ -70,7 +67,6 @@ const ScheduleSection = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
@@ -94,7 +90,6 @@ const ScheduleSection = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
@@ -105,27 +100,24 @@ const ScheduleSection = () => {
                   <h3 className="font-heading font-semibold text-lg">
                     Week 4: In-Person Finale (for both Ventures and CXOs tracks)
                   </h3>
-
                   <p className="text-primary mb-2 font-medium">
                     August 23, 2025{" "}
                   </p>
                   <p className="text-gray-600">
                     Final presentations, investor networking event,
-                    “speed-dating" with deep-tech ventures, and graduation
+                    "speed-dating" with deep-tech ventures, and graduation
                     ceremony.{" "}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
           <div>
             <img
               src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800"
               alt="Tech entrepreneur presenting at business workshop"
               className="rounded-xl shadow-md mb-8"
             />
-
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-heading text-xl font-semibold mb-4">
                 Program Format
@@ -135,7 +127,6 @@ const ScheduleSection = () => {
                 hands-on activities and networking with flexible online
                 learning.
               </p>
-
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
@@ -150,7 +141,6 @@ const ScheduleSection = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
                     <i className="fas fa-laptop text-primary"></i>
@@ -166,7 +156,6 @@ const ScheduleSection = () => {
                   </div>
                 </div>
               </div>
-
               <div className="mt-8">
                 <Button
                   variant="outline"
