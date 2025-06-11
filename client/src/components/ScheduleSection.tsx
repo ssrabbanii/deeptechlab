@@ -1,15 +1,50 @@
 import { Button } from "@/components/ui/button";
-import syllabusFile from "@assets/Course Syllabus Overview Scientists Track and Business Leaders Track June 2025_1749623282882.pdf";
+import { useEffect } from "react";
+
+// Extend window object for Typeform
+declare global {
+  interface Window {
+    tf?: {
+      createPopup: (formId: string) => {
+        open: () => void;
+      };
+    };
+  }
+}
 
 const ScheduleSection = () => {
-  // Download syllabus handler
+  // Load Typeform embed script
+  useEffect(() => {
+    // Check if script is already loaded
+    if (document.querySelector('script[src*="embed.typeform.com"]')) {
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // No cleanup needed as the script should persist
+  }, []);
+
+  // Handle syllabus download - opens Typeform popup
   const handleDownloadSyllabus = () => {
-    const link = document.createElement('a');
-    link.href = syllabusFile;
-    link.download = 'Course-Syllabus-Deep-Tech-Leadership-Program.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Create and trigger the Typeform popup
+    const tf = (window as any).tf;
+    if (tf) {
+      tf.createPopup('01JXETGQT5JP073CBZW99VT153').open();
+    } else {
+      // Fallback if Typeform script hasn't loaded yet
+      setTimeout(() => {
+        const tfRetry = (window as any).tf;
+        if (tfRetry) {
+          tfRetry.createPopup('01JXETGQT5JP073CBZW99VT153').open();
+        } else {
+          alert('Please try again in a moment while the form loads.');
+        }
+      }, 1000);
+    }
   };
 
   return (
