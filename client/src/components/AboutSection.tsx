@@ -25,7 +25,7 @@ const AboutSection = () => {
             </h2>
             <div className="section-divider"></div>
             <p className="text-gray-600 my-4">
-              This C-suite leadership development program is the FIRST program
+              The Deep-Tech Lab Business Executives Program is the FIRST program
               of its kind in Hong Kong and is tailored to educate and align
               experienced business leaders and technology founders for roles as
               CEO and other CXO roles in deep tech ventures. The program aims to
