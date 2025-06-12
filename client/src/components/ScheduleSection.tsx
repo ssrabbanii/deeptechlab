@@ -167,6 +167,44 @@ const ScheduleSection = () => {
                 </Button>
               </div>
             </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading text-xl font-semibold mb-4">
+                Program Deadline
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
+                    <i className="fas fa-users text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-semibold">
+                      Deadline of Scientists Track
+                    </h4>
+                    <p className="text-gray-600">
+                      27 June 2025
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="bg-primary bg-opacity-10 w-10 h-10 flex items-center justify-center rounded-full shrink-0 mr-4">
+                    <i className="fas fa-laptop text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-semibold">
+                      Deadline of Business Leaders Track
+                    </h4>
+                    <p className="text-gray-600">
+                      25 July 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+
+            
           </div>
         </div>
       </div>

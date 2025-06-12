@@ -27,6 +27,9 @@ const HeroSection = () => {
             <p className="text-xl mb-8 opacity-90">
               Empowering Deep-Tech Founders to Lead from Day One. 
             </p>
+            <p className="text-xl mb-8 opacity-90">
+              First-of-its kind program in Hong Kong bridging tech and business leadership.
+            </p>
             <div className="flex flex-wrap gap-4">
               <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
                 <Button className="bg-accent hover:bg-amber-500 text-dark px-6 py-6 rounded-md font-heading font-semibold text-base transition-all hover:shadow-lg h-auto">
