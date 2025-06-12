@@ -33,10 +33,10 @@ const ScheduleSection = () => {
                     Week 1: In-Person Kickoff
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Ventures Track Class: July 5, 2025
+                    Scientists Track Class: July 5, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 2, 2025
+                    Business Leaders Track Class: August 2, 2025
                   </p>
                   <p className="text-gray-600">
                     Intensive workshops covering business fundamentals,
@@ -56,10 +56,10 @@ const ScheduleSection = () => {
                     Week 2: Online Sessions
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Ventures Track Class: July 12, 2025
+                    Scientists Track Class: July 12, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 9, 2025
+                    Business Leaders Track Class: August 9, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual learning modules on fundraising strategies, pitch
@@ -79,10 +79,10 @@ const ScheduleSection = () => {
                     Week 3: Online Sessions
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Ventures Track Class: July 19, 2025
+                    Scientists Track Class: July 19, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    CXOs Track Class: August 16, 2025
+                    Business Leaders Track Class: August 16, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual sessions on go-to-market strategy, team building,
@@ -98,7 +98,7 @@ const ScheduleSection = () => {
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm flex-1">
                   <h3 className="font-heading font-semibold text-lg">
-                    Week 4: In-Person Finale (for both Ventures and CXOs tracks)
+                    Week 4: In-Person Finale (for both Scientists and Business Leaders tracks)
                   </h3>
                   <p className="text-primary mb-2 font-medium">
                     August 23, 2025{" "}

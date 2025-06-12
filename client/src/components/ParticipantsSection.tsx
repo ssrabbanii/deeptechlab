@@ -31,7 +31,7 @@ const ParticipantsSection = () => {
               Who Should Apply
             </h3>
             <div className="mb-4">
-              <h4 className="font-semibold text-primary mb-2">Ventures Track</h4>
+              <h4 className="font-semibold text-primary mb-2">Scientists Track</h4>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>Scientists working on spinouts</li>
                 <li>Post-docs and Technical CTOs transitioning into CEO/COO roles</li>
@@ -40,7 +40,7 @@ const ParticipantsSection = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-primary mb-2">CXOs Track</h4>
+              <h4 className="font-semibold text-primary mb-2">Business Leaders Track</h4>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>Experienced business leaders/entrepreneurs looking for new challenges</li>
                 <li>Business graduates with start-up career ambition</li>

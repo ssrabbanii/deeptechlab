@@ -22,7 +22,7 @@ const HeroSection = () => {
               />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold leading-tight mb-4">
-              Empowering Deep-Tech Founders to Lead from Day One.
+              Deep-Tech Lab Business Executives Program.
             </h1>
             <p className="text-xl mb-8 opacity-90">
               First-of-its-kind program in Hong Kong bridging tech and business leadership.
