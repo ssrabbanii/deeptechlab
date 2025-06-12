@@ -3,6 +3,42 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Security headers to prevent browser warnings
+app.use((req, res, next) => {
+  // Prevent clickjacking attacks
+  res.setHeader('X-Frame-Options', 'DENY');
+  
+  // Prevent MIME type sniffing
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  
+  // Enable XSS protection
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  
+  // Referrer policy
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Content Security Policy
+  res.setHeader('Content-Security-Policy', 
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com https://ka-f.fontawesome.com; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com; " +
+    "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; " +
+    "img-src 'self' data: https: blob:; " +
+    "connect-src 'self' https: wss: ws:; " +
+    "frame-src 'self' https://www.google.com; " +
+    "object-src 'none'; " +
+    "base-uri 'self';"
+  );
+  
+  // Permissions policy
+  res.setHeader('Permissions-Policy', 
+    'camera=(), microphone=(), geolocation=(), payment=()'
+  );
+  
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

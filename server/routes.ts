@@ -131,6 +131,102 @@ export async function registerRoutes(app: Express): Promise<Server> {
     });
   });
 
+  // Security and SEO files
+  app.get("/robots.txt", (req: Request, res: Response) => {
+    res.type("text/plain");
+    res.send(`User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hkdeeptechlab.io/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin paths (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important pages
+Allow: /apply
+Allow: /about
+Allow: /contact
+Allow: /faculty
+Allow: /schedule
+Allow: /faq
+Allow: /for-participants
+Allow: /for-partners`);
+  });
+
+  app.get("/.well-known/security.txt", (req: Request, res: Response) => {
+    res.type("text/plain");
+    res.send(`Contact: mailto:2025cohort@hkdeeptechlab.io
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://hkdeeptechlab.io/.well-known/security.txt`);
+  });
+
+  app.get("/sitemap.xml", (req: Request, res: Response) => {
+    res.type("application/xml");
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hkdeeptechlab.io/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/apply</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/about</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/faculty</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/schedule</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/faq</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/for-participants</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hkdeeptechlab.io/for-partners</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>`);
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
