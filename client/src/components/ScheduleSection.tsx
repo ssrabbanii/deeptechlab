@@ -180,11 +180,11 @@ const ScheduleSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading font-semibold">
-                      Deadline of Scientists Track
+                      Scientists Track Deadline: 27 June 2025
                     </h4>
-                    <p className="text-gray-600">
+                    {/* <p className="text-gray-600">
                       27 June 2025
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -193,11 +193,11 @@ const ScheduleSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading font-semibold">
-                      Deadline of Business Leaders Track
+                      Business Leaders Track Deadline: 25 July 2025
                     </h4>
-                    <p className="text-gray-600">
+                    {/* <p className="text-gray-600">
                       25 July 2025
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
