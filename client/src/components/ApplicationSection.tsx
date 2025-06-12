@@ -87,7 +87,7 @@ const ApplicationSection = () => {
                 rel="noopener noreferrer"
               >
                 <Button className="w-full bg-primary hover:bg-purple-600 text-primary-foreground font-semibold py-4 px-6 text-lg rounded-md h-auto">
-                  Apply as Venture / Professor
+                  Apply as Scientist 
                 </Button>
               </a>
 
@@ -97,7 +97,7 @@ const ApplicationSection = () => {
                 rel="noopener noreferrer"
               >
                 <Button className="w-full bg-primary hover:bg-purple-600 text-primary-foreground font-semibold py-4 px-6 text-lg rounded-md h-auto">
-                  Apply as C-Suite Executive
+                  Apply as Business Leader
                 </Button>
               </a>
             </div>

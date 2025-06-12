@@ -25,7 +25,7 @@ const HeroSection = () => {
               Deep-Tech Lab Business Executives Program.
             </h1>
             <p className="text-xl mb-8 opacity-90">
-              First-of-its-kind program in Hong Kong bridging tech and business leadership.
+              Empowering Deep-Tech Founders to Lead from Day One. 
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
