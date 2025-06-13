@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
 const ScheduleSection = () => {
-  // Download syllabus handler
+  // Download syllabus handler - always force download
   const handleDownloadSyllabus = async () => {
     try {
       const response = await fetch('/api/syllabus');
@@ -12,10 +12,17 @@ const ScheduleSection = () => {
         const link = document.createElement('a');
         link.href = url;
         link.download = 'HK-DeepTech-Lab-Syllabus-2025.pdf';
+        link.style.display = 'none';
+        
+        // Force download on all devices including mobile
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
+        
+        // Clean up immediately
+        setTimeout(() => {
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        }, 100);
       } else {
         console.error('Failed to download syllabus');
       }
