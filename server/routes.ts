@@ -233,6 +233,14 @@ startxref
     res.send(Buffer.from(pdfContent));
   });
 
+  // Serve PDF directly at the expected URL for inline viewing
+  app.get("/files/syllabus.pdf", (req: Request, res: Response) => {
+    const syllabusPath = path.join(__dirname, "syllabus.pdf");
+    res.setHeader("Content-Type", "application/pdf");
+    res.setHeader("Content-Disposition", 'inline; filename="HK-DeepTech-Lab-Syllabus-2025.pdf"');
+    res.sendFile(syllabusPath);
+  });
+
   // Security and SEO files
   app.get("/robots.txt", (req: Request, res: Response) => {
     res.type("text/plain");
