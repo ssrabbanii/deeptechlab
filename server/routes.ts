@@ -123,8 +123,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Serve syllabus PDF
   app.get("/api/syllabus", (req: Request, res: Response) => {
-    // Create PDF content based on the provided syllabus
-    const pdfContent = `%PDF-1.4
+    try {
+      const syllabusPath = path.resolve(process.cwd(), "server", "syllabus.pdf");
+      const pdfBuffer = fs.readFileSync(syllabusPath);
+      
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", 'attachment; filename="HK-DeepTech-Lab-Syllabus-2025.pdf"');
+      res.setHeader("Content-Length", pdfBuffer.length.toString());
+      res.send(pdfBuffer);
+    } catch (error) {
+      console.error("Error serving PDF for download:", error);
+      res.status(404).json({ error: "Syllabus not found" });
+    }
+  });
 1 0 obj
 <<
 /Type /Catalog
