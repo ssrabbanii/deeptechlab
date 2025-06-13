@@ -31,14 +31,14 @@ function App() {
       <Layout>
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
+          {/* <Route path="/about" component={About} />
           <Route path="/for-participants" component={ForParticipants} />
           <Route path="/for-partners" component={ForPartners} />
           <Route path="/faculty" component={Faculty} />
-          <Route path="/schedule" component={Schedule} />
+          <Route path="/schedule" component={Schedule} /> */}
           <Route path="/apply" component={Apply} />
-          <Route path="/faq" component={FAQ} />
-          <Route path="/contact" component={Contact} />
+          {/* <Route path="/faq" component={FAQ} />
+          <Route path="/contact" component={Contact} /> */}
           <Route component={NotFound} />
         </Switch>
       </Layout>
