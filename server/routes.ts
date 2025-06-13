@@ -235,10 +235,18 @@ startxref
 
   // Serve PDF directly at the expected URL for inline viewing
   app.get("/files/syllabus.pdf", (req: Request, res: Response) => {
-    const syllabusPath = path.join(__dirname, "syllabus.pdf");
-    res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", 'inline; filename="HK-DeepTech-Lab-Syllabus-2025.pdf"');
-    res.sendFile(syllabusPath);
+    try {
+      const syllabusPath = path.resolve(process.cwd(), "server", "syllabus.pdf");
+      const pdfBuffer = fs.readFileSync(syllabusPath);
+      
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", 'inline; filename="HK-DeepTech-Lab-Syllabus-2025.pdf"');
+      res.setHeader("Content-Length", pdfBuffer.length.toString());
+      res.send(pdfBuffer);
+    } catch (error) {
+      console.error("Error serving PDF:", error);
+      res.status(404).json({ error: "Syllabus not found" });
+    }
   });
 
   // Security and SEO files
