@@ -55,7 +55,7 @@ const ParticipantsSection = () => {
             <h3 className="font-heading text-xl font-semibold mb-4">
               Learning Outcomes
             </h3>
-            <ul className="space-y-2 text-gray-600 list-disc list-inside">
+            <ul className="space-y-2 text-gray-600 list-disc list-outside pl-5">
               <li>
                 <strong>Build Your Unicorn. No Idea Needed. Just Vision.</strong><br />
                 Step into a CEO role with paid opportunities and real skin in the game.
@@ -78,8 +78,6 @@ const ParticipantsSection = () => {
               </li>
             </ul>
           </div>
-      
-
 
           {/* Program Format */}
           <div className="bg-light rounded-lg p-6 shadow-sm">
@@ -105,11 +103,11 @@ const ParticipantsSection = () => {
             <ul className="text-gray-700 mb-4">
               <li className="flex justify-between py-2 border-b border-gray-200">
                 <span>Individual Participant</span>
-                <span className="font-heading font-bold text-xl">$2,000</span>
+                <span className="font-heading font-bold text-xl">HK$2,000</span>
               </li>
               <li className="flex justify-between py-2 border-b border-gray-200">
                 <span>Venture (up to 3 members)</span>
-                <span className="font-heading font-bold text-xl">$3,600</span>
+                <span className="font-heading font-bold text-xl">HK$3,600</span>
               </li>
             </ul>
             <div className="bg-accent bg-opacity-10 text-dark p-4 rounded-md">
