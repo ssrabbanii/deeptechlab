@@ -22,14 +22,14 @@ const HeroSection = () => {
               />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold leading-tight mb-4">
-              Deep-Tech Lab Business Executives Program.
+              Deep-Tech Lab Business Executives Program
             </h1>
             <p className="text-xl mb-8 opacity-90">
-              Empowering Deep-Tech Founders to Lead from Day One. 
+              Your opportunity in co-building Hong Kong's next Deep-Tech Unicorn!
             </p>
-            <p className="text-xl mb-8 opacity-90">
+            {/* <p className="text-xl mb-8 opacity-90">
               First-of-its-kind program in Hong Kong bridging tech and business leadership, fostering collaboration and enhancing the success rate of deep-tech startups.
-            </p>
+            </p> */}
             <div className="flex flex-wrap gap-4">
               <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
                 <Button className="bg-accent hover:bg-amber-500 text-dark px-6 py-6 rounded-md font-heading font-semibold text-base transition-all hover:shadow-lg h-auto">

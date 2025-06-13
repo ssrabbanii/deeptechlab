@@ -57,10 +57,10 @@ const ScheduleSection = () => {
                     Week 1: In-Person Kickoff
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Scientists Track Class: July 5, 2025
+                    Scientists Track: July 5, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    Business Leaders Track Class: August 2, 2025
+                    Business Leaders Track: August 2, 2025
                   </p>
                   <p className="text-gray-600">
                     Intensive workshops covering business fundamentals,
@@ -80,10 +80,10 @@ const ScheduleSection = () => {
                     Week 2: Online Sessions
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Scientists Track Class: July 12, 2025
+                    Scientists Track: July 12, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    Business Leaders Track Class: August 9, 2025
+                    Business Leaders Track: August 9, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual learning modules on fundraising strategies, pitch
@@ -103,10 +103,10 @@ const ScheduleSection = () => {
                     Week 3: Online Sessions
                   </h3>
                   <p className="text-primary mb-2 font-medium">
-                    Scientists Track Class: July 19, 2025
+                    Scientists Track: July 19, 2025
                   </p>
                   <p className="text-primary mb-2 font-medium">
-                    Business Leaders Track Class: August 16, 2025
+                    Business Leaders Track: August 16, 2025
                   </p>
                   <p className="text-gray-600">
                     Virtual sessions on go-to-market strategy, team building,
