@@ -155,7 +155,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <i className="fas fa-envelope text-primary mr-2"></i>
                 <a
-                  href="mailto:info@dtl-hk.com"
+                  href="mailto:admin@hkdeeptechlab.io"
                   className="text-gray-400 hover:text-black transition-colors"
                 >
                   admin@hkdeeptechlab.io

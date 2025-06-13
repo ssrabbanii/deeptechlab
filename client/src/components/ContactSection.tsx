@@ -319,7 +319,7 @@ const ContactSection = () => {
                   <p className="text-gray-600">
                     Program Inquiries:{" "}
                     <a
-                      href="mailto:2025cohort@hkdeeptechlab.io"
+                      href="mailto:admin@hkdeeptechlab.io"
                       className="text-primary hover:underline"
                     >
                       admin@hkdeeptechlab.io

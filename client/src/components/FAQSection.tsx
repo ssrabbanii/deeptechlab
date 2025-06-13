@@ -12,9 +12,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Who is eligible to apply?",
     answer: `
-    For Technology Track: The program is designed for technical founders, scientists, engineers, and post-docs/researchers involved in deep-tech ventures. Applicants should have technical expertise and be in (or aspiring to) leadership roles such as CEO, CTO, or other C-suite positions. Both early-stage startups and spinouts from research institutions are welcome.
-
-    For Business C-Suite Leader Track: Experienced business leaders, business/MBA/EMBA graduates with start-up career ambition, and second-generation family talent aspiring to become CXOs in deep tech ventures.
+    For Scientists Track: The program is designed for technical founders, scientists, engineers, and post-docs/researchers involved in deep-tech ventures. Applicants should have technical expertise and be in (or aspiring to) leadership roles such as CEO, CTO, or other C-suite positions. Both early-stage startups and spinouts from research institutions are welcome. For Business Leaders Track: Experienced business leaders, business/MBA/EMBA graduates with start-up career ambition, and second-generation family talent aspiring to become CXOs in deep tech ventures.
     `,
   },
   {
