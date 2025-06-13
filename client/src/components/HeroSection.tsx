@@ -28,7 +28,7 @@ const HeroSection = () => {
               Empowering Deep-Tech Founders to Lead from Day One. 
             </p>
             <p className="text-xl mb-8 opacity-90">
-              First-of-its kind program in Hong Kong bridging tech and business leadership.
+              First-of-its-kind program in Hong Kong bridging tech and business leadership, fostering collaboration and enhancing the success rate of deep-tech startups.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
