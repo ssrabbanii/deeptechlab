@@ -3,8 +3,25 @@ import { useEffect } from "react";
 
 const ScheduleSection = () => {
   // Download syllabus handler
-  const handleDownloadSyllabus = () => {
-    window.open("https://form.typeform.com/to/mFgZKXFn", "_blank");
+  const handleDownloadSyllabus = async () => {
+    try {
+      const response = await fetch('/api/syllabus');
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'HK-DeepTech-Lab-Syllabus-2025.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      } else {
+        console.error('Failed to download syllabus');
+      }
+    } catch (error) {
+      console.error('Error downloading syllabus:', error);
+    }
   };
 
   return (

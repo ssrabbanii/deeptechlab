@@ -17,6 +17,29 @@ const Footer = () => {
     }
   };
 
+  // Download syllabus handler
+  const handleDownloadSyllabus = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/syllabus');
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'HK-DeepTech-Lab-Syllabus-2025.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      } else {
+        console.error('Failed to download syllabus');
+      }
+    } catch (error) {
+      console.error('Error downloading syllabus:', error);
+    }
+  };
+
   return (
     <footer className="bg-dark text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -46,7 +69,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#home" : "/"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "home")}
                 >
                   Home
@@ -55,7 +78,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#about" : "/about"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "about")}
                 >
                   About
@@ -64,7 +87,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#participants" : "/for-participants"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "participants")}
                 >
                   For Participants
@@ -73,7 +96,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#partners" : "/for-partners"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "partners")}
                 >
                   For Partners
@@ -90,7 +113,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#faculty" : "/faculty"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "faculty")}
                 >
                   Faculty & Speakers
@@ -99,7 +122,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#schedule" : "/schedule"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "schedule")}
                 >
                   Program Schedule
@@ -108,7 +131,7 @@ const Footer = () => {
               <li>
                 <a
                   href={isHomePage ? "#faq" : "/faq"}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                   onClick={(e) => handleNavigation(e, "faq")}
                 >
                   FAQs
@@ -116,10 +139,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/files/syllabus.pdf"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
+                  className="text-gray-400 hover:text-black transition-colors cursor-pointer"
+                  onClick={handleDownloadSyllabus}
                 >
                   Download Syllabus
                 </a>
@@ -134,7 +156,7 @@ const Footer = () => {
                 <i className="fas fa-envelope text-primary mr-2"></i>
                 <a
                   href="mailto:info@dtl-hk.com"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-black transition-colors"
                 >
                   admin@hkdeeptechlab.io
                 </a>

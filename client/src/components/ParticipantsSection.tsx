@@ -50,19 +50,36 @@ const ParticipantsSection = () => {
           </div>
 
           {/* Learning Outcomes */}
+        
           <div className="bg-light rounded-lg p-6 shadow-sm">
             <h3 className="font-heading text-xl font-semibold mb-4">
               Learning Outcomes
             </h3>
             <ul className="space-y-2 text-gray-600 list-disc list-inside">
-              <li>Understanding of Deep-Tech Ecosystems</li>
-              <li>Strategic Commercialization Pathways</li>
-              <li>Effective Fundraising and Growth Strategies</li>
-              <li>Go-to-market Strategy Development</li>
-              <li>Leadership and Team Management</li>
-              <li>Start off Mindset Shift towards Deep-tech Ventures</li>
+              <li>
+                <strong>Build Your Unicorn. No Idea Needed. Just Vision.</strong><br />
+                Step into a CEO role with paid opportunities and real skin in the game.
+              </li>
+              <li>
+                <strong>IPs Ready. Tech Teams Assembled.</strong><br />
+                Commercialize cutting-edge deep tech approved by top HK universities.
+              </li>
+              <li>
+                <strong>Backed by the Entire Ecosystem.</strong><br />
+                Connect with government, corporates, universities, and investors—already onboard to support you.
+              </li>
+              <li>
+                <strong>Learn Fast. Execute Faster.</strong><br />
+                Master frontier tech + business in an immersive, action-based program.
+              </li>
+              <li>
+                <strong>Join the Inner Circle of Impact Leaders.</strong><br />
+                Access a powerful alumni network shaping the future of Asia's deep tech.
+              </li>
             </ul>
           </div>
+      
+
 
           {/* Program Format */}
           <div className="bg-light rounded-lg p-6 shadow-sm">
