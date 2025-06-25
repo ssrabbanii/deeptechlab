@@ -4,7 +4,7 @@ import { Link } from "wouter";
 
 const facultyMembers = [
   {
-    name: "Dr. Kevin Au",
+    name: "Prof. Kevin Au",
     role: "",
     bio: "Director of the CUHK Centre for Entrepreneurship and Centre for Family Business, Prof. Au is a leading expert in entrepreneurship, family business, and international management. He is also an angel investor, board advisor, and policy contributor, bridging academia, government, and startup ecosystems across Asia.",
     image:
@@ -39,9 +39,9 @@ const facultyMembers = [
       "https://static.wixstatic.com/media/fc0576_f94a77c69a4d4c5b98dc03a2aebd5398~mv2.jpg/v1/fill/w_378,h_302,al_c,lg_1,q_80,enc_avif,quality_auto/Sidney%20CV%202024%20WBI%20International_edited.jpg",
   },
   {
-    name: "Dr. Victoria Jian Wang",
+    name: "Prof. Victoria Jian Wang",
     role: "",
-    bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Dr. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and adjunct associate professor in management at CUHK, she mentors C-suite leaders and women executives globally. ",
+    bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Prof. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and adjunct associate professor in management at CUHK, she mentors C-suite leaders and women executives globally. ",
     image:
       "https://static.wixstatic.com/media/fc0576_3bd63deeb7e14b98aa7ef01df377a56b~mv2.jpg/v1/fill/w_914,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-26%20at%205_40_edited.jpg",
   },

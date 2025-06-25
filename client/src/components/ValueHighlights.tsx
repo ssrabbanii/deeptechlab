@@ -126,6 +126,7 @@ const ValueHighlights = () => {
           <span className="font-heading font-bold text-xl text-gray-700">
             CUHK CfE
           </span>
+          
           <span className="font-heading font-bold text-xl text-gray-700">
             HKUMed
           </span>
@@ -135,6 +136,9 @@ const ValueHighlights = () => {
           <span className="font-heading font-bold text-xl text-gray-700">
             HKBU EIC
           </span>
+          <span className="font-heading font-bold text-xl text-gray-700">
+            CUHK Innovation Limited
+          </span>
         </div>
       </div>
     </section>
@@ -142,3 +146,4 @@ const ValueHighlights = () => {
 };
 
 export default ValueHighlights;
+
