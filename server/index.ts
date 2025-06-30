@@ -21,11 +21,11 @@ app.use((req, res, next) => {
   // Content Security Policy
   res.setHeader('Content-Security-Policy', 
     "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com https://ka-f.fontawesome.com; " +
+    "script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com; " +
     "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; " +
-    "img-src 'self' data: https: blob:; " +
-    "connect-src 'self' https: wss: ws:; " +
+    "img-src 'self' data: https: blob: https://www.google-analytics.com https://ssl.google-analytics.com; " +
+    "connect-src 'self' https: wss: ws: https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; " +
     "frame-src 'self' https://www.google.com; " +
     "object-src 'none'; " +
     "base-uri 'self';"
