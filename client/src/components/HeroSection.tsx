@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { scrollToSection } from '@/lib/utils';
 import { Link } from 'wouter';
+import { trackEvent } from '@/components/GoogleAnalytics';
 import weAreHiringImage from '@assets/we are hiring.png';
 
 const HeroSection = () => {
@@ -31,16 +32,24 @@ const HeroSection = () => {
               First-of-its-kind program in Hong Kong bridging tech and business leadership, fostering collaboration and enhancing the success rate of deep-tech startups.
             </p> */}
             <div className="flex flex-wrap gap-4">
-              <Link href="#apply" onClick={(e) => handleNavigation(e, 'apply')}>
+              <Link href="#apply" onClick={(e) => {
+                handleNavigation(e, 'apply');
+                trackEvent('cta_click', 'navigation', 'hero_apply_now');
+              }}>
                 <Button className="bg-accent hover:bg-amber-500 text-dark px-6 py-6 rounded-md font-heading font-semibold text-base transition-all hover:shadow-lg h-auto">
                   Apply Now
                 </Button>
               </Link>
-              {/* <Link href="#partners" onClick={(e) => handleNavigation(e, 'partners')}>
-                <Button variant="outline" className="bg-white bg-opacity-20 hover:bg-opacity-30 border border-white px-6 py-6 rounded-md font-heading font-semibold text-base transition-all text-white h-auto">
-                  Nominate a Venture
-                </Button>
-              </Link> */}
+              <Button 
+                variant="outline" 
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 border border-white px-6 py-6 rounded-md font-heading font-semibold text-base transition-all text-white h-auto"
+                onClick={() => {
+                  trackEvent('test_event', 'analytics', 'test_button');
+                  alert('GA Test Event Sent! Check your browser console and GA Real-Time reports.');
+                }}
+              >
+                Test Analytics
+              </Button>
             </div>
           </div>
           <div className="order-1 md:order-2">
