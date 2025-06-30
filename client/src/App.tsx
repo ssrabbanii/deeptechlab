@@ -10,23 +10,12 @@ import Apply from "@/pages/Apply";
 import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
-import { Helmet } from "react-helmet";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 function App() {
   return (
     <>
-      <Helmet>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYBMEVY9WQ"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PYBMEVY9WQ');
-          `}
-        </script>
-      </Helmet>
+      <GoogleAnalytics measurementId="G-PYBMEVY9WQ" />
 
       <Layout>
         <Switch>

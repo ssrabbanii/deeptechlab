@@ -18,18 +18,34 @@ app.use((req, res, next) => {
   // Referrer policy
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   
-  // Content Security Policy
-  res.setHeader('Content-Security-Policy', 
-    "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com; " +
-    "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; " +
-    "img-src 'self' data: https: blob: https://www.google-analytics.com https://ssl.google-analytics.com; " +
-    "connect-src 'self' https: wss: ws: https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; " +
-    "frame-src 'self' https://www.google.com; " +
-    "object-src 'none'; " +
-    "base-uri 'self';"
-  );
+  // Content Security Policy - Development-friendly configuration
+  if (app.get("env") === "development") {
+    // More permissive CSP for development (Vite needs inline scripts)
+    res.setHeader('Content-Security-Policy', 
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://replit.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
+      "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
+      "img-src 'self' data: https: blob: https://www.google-analytics.com https://ssl.google-analytics.com; " +
+      "connect-src 'self' https: wss: ws: https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; " +
+      "frame-src 'self' https://www.google.com; " +
+      "object-src 'none'; " +
+      "base-uri 'self';"
+    );
+  } else {
+    // Strict CSP for production (external scripts only)
+    res.setHeader('Content-Security-Policy', 
+      "default-src 'self'; " +
+      "script-src 'self' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
+      "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
+      "img-src 'self' data: https: blob: https://www.google-analytics.com https://ssl.google-analytics.com; " +
+      "connect-src 'self' https: wss: ws: https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; " +
+      "frame-src 'self' https://www.google.com; " +
+      "object-src 'none'; " +
+      "base-uri 'self';"
+    );
+  }
   
   // Permissions policy
   res.setHeader('Permissions-Policy', 
