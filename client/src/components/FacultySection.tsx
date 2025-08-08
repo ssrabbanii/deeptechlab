@@ -31,13 +31,6 @@ const facultyMembers = [
     image: "/attached_assets/Keenan.jpg",
   },
   {
-    name: "Dr. Sidney Tam",
-    role: "",
-    bio: "With 40+ years in MNCs and China’s corporate scene, Dr. Tam brings deep expertise in cross-border innovation across biotech, media, Industry 4.0, healthcare, and venture finance. As CEO of Reanda Consulting and co-founder of LifeHealth Group, he has led four companies through IPOs and M&As. A seasoned leader, strategic advisor, and startup mentor, he drives transformation across Asia’s innovation ecosystem.",
-    image:
-      "https://static.wixstatic.com/media/fc0576_f94a77c69a4d4c5b98dc03a2aebd5398~mv2.jpg/v1/fill/w_378,h_302,al_c,lg_1,q_80,enc_avif,quality_auto/Sidney%20CV%202024%20WBI%20International_edited.jpg",
-  },
-  {
     name: "Prof. Victoria Jian Wang",
     role: "",
     bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Prof. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and adjunct associate professor in management at CUHK, she mentors C-suite leaders and women executives globally. ",
@@ -52,6 +45,13 @@ const guestSpeakers = [
     role: "CEO, Pebble Accelerator",
     bio: "Emmanuel Hui is the Principal of Pentepebble – an early-stage healthcare and life sciences fund with a GBA mandate. For his portfolio, he serves as a Board member of Tonisity China, EggLogics, and Angene Biotechnology. Pentepebble is a spin-off from Sagamore, a China-only fund of funds, and is also backed by HN Group (Macau). Prior to investing, Emmanuel co-founded Moogene Medi (KRX:322970), a gene therapy platform company. He also serves on the HKSTP Biomedical Techno ...[Truncated]",
     image: "/attached_assets/EmmanuelHui.jpg",
+  },
+  {
+    name: "Dr. Sidney Tam",
+    role: "CEO, Synexo",
+    bio: "With 40+ years in MNCs and China’s corporate scene, Dr. Tam brings deep expertise in cross-border innovation across biotech, media, Industry 4.0, healthcare, and venture finance. As CEO of Reanda Consulting and co-founder of LifeHealth Group, he has led four companies through IPOs and M&As. A seasoned leader, strategic advisor, and startup mentor, he drives transformation across Asia’s innovation ecosystem.",
+    image:
+      "https://static.wixstatic.com/media/fc0576_f94a77c69a4d4c5b98dc03a2aebd5398~mv2.jpg/v1/fill/w_378,h_302,al_c,lg_1,q_80,enc_avif,quality_auto/Sidney%20CV%202024%20WBI%20International_edited.jpg",
   },
   {
     name: "Mr. Mike Mastroyiannis",
