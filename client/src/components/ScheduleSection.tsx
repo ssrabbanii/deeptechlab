@@ -204,7 +204,7 @@ const ScheduleSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading font-semibold">
-                      Scientists Track Deadline: 27 June 2025
+                      Scientists Track Deadline (Extended): 2 July 2025
                     </h4>
                     {/* <p className="text-gray-600">
                       27 June 2025
