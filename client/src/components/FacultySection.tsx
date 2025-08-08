@@ -37,12 +37,6 @@ const facultyMembers = [
     image:
       "https://static.wixstatic.com/media/fc0576_3bd63deeb7e14b98aa7ef01df377a56b~mv2.jpg/v1/fill/w_914,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-26%20at%205_40_edited.jpg",
   },
-  {
-    name: "Dr. Carolyn Zhao",
-    role: "",
-    bio: "Dr. Carolyn Zhao is the Founder of LinkLab Innovation and Partner at TenX2. She specializes in high-tech scouting, innovation strategy, and scaling startups. With 15+ years of experience, she's led corporate innovation for Fortune 500s across the US and Asia, and worked across sectors including telecom, healthcare, AIoT, and mobility. Her global network spans academia, tech parks, and cross-industry MNCs.",
-    image: "/attached_assets/Carolyn.jpg",
-  },
 ];
 
 const guestSpeakers = [
@@ -94,6 +88,12 @@ const guestSpeakers = [
     role: "Managing Director, LeafIoT Technology Limited",
     bio: "Herman Chan leads LeafIoT Technology, pioneering AIoT-based tree risk assessment. He developed the world's first tree heartbeat detector and is driving urban forestry innovation globally. With a focus on sustainability, Chan connects EU carbon projects to international clients and is recognized at platforms such as GITEX Asia and ZurichHongKong Climate Month for his leadership in sustainable innovation.",
     image: "/attached_assets/Herman-Chan.jpg",
+  },
+  {
+    name: "Dr. Carolyn Zhao",
+    role: "Founder of LinkLab Innovation & Partner, TenX2",
+    bio: "Dr. Carolyn Zhao is the Founder of LinkLab Innovation and Partner at TenX2. She specializes in high-tech scouting, innovation strategy, and scaling startups. With 15+ years of experience, she's led corporate innovation for Fortune 500s across the US and Asia, and worked across sectors including telecom, healthcare, AIoT, and mobility. Her global network spans academia, tech parks, and cross-industry MNCs.",
+    image: "/attached_assets/Carolyn.jpg",
   },
 ];
 
@@ -148,7 +148,7 @@ const FacultySection = () => {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl font-bold mb-3">
-              Guest Speakers - Summer 2025
+              Guest Speakers/Facilitator - Summer 2025
             </h2>
             <div className="section-divider mx-auto"></div>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
