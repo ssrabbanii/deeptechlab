@@ -22,14 +22,13 @@ const facultyMembers = [
     name: "Dr. Marta Dowejko",
     role: "",
     bio: "Dr. Dowejko is Assistant Dean (Global Engagement) and Director of Entrepreneurship and Innovation Centre at School of Business, Hong Kong Baptist University, specializing in entrepreneurship education and startup ecosystem development. A former startup co-founder and mentor, she connects academia, investors, and ecosystem players to support innovative and sustainable ventures in Hong Kong and the Greater Bay Area. She is an advocate for the qualitative-first, empathy-driven approach to innovation.",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQEEC0tjs4fK7w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516764841662?e=1753920000&v=beta&t=NniwmU7PcFSd1MSkFmZk1DKDZ1k_sMPj6xYAYdMM4SY",
+    image: "/attached_assets/marta.png",
   },
   {
     name: "Mr. Keenan Kwok",
     role: "",
     bio: "Keenan Kwok is the Group CEO of GetLinks, Asia’s leading curated tech hiring marketplace operating across Hong Kong, Singapore, Thailand, Vietnam, and Indonesia. A serial entrepreneur and angel investor, he also serves as Co-founder of Aera VC, Founder of AsiaStartups, and advisor to multiple tech and manufacturing companies. With a career spanning investment banking at Deutsche Bank to scaling startups and venture funds, he is a recognized force in building Asia’s digital and innovation ecosystem.",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQFesd6oypUWIQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1564815364207?e=1754524800&v=beta&t=UAPo1mcvilYROjxWFZuZtzynrzH3qDLHMoTmDJbtnqQ"
+    image: "/attached_assets/Keenan.jpg",
   },
   {
     name: "Dr. Sidney Tam",
@@ -45,8 +44,6 @@ const facultyMembers = [
     image:
       "https://static.wixstatic.com/media/fc0576_3bd63deeb7e14b98aa7ef01df377a56b~mv2.jpg/v1/fill/w_914,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-26%20at%205_40_edited.jpg",
   },
-
-
 ];
 
 const guestSpeakers = [
@@ -155,7 +152,9 @@ const FacultySection = () => {
             </h2>
             <div className="section-divider mx-auto"></div>
             <p className="text-gray-600 max-w-3xl mx-auto mt-4">
-              Industry leaders, successful entrepreneurs, and innovation experts who will share their insights and experience throughout the program.
+              Industry leaders, successful entrepreneurs, and innovation experts
+              who will share their insights and experience throughout the
+              program.
             </p>
           </div>
 
@@ -186,8 +185,8 @@ const FacultySection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6">
-            Our faculty roster continues to grow with industry experts and thought
-            leaders joining the program throughout the year.
+            Our faculty roster continues to grow with industry experts and
+            thought leaders joining the program throughout the year.
           </p>
           {/* <Link href="#contact" onClick={(e) => handleNavigation(e, "contact")}>
             <Button
