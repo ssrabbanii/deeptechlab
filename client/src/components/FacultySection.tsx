@@ -33,7 +33,7 @@ const facultyMembers = [
   {
     name: "Prof. Victoria Jian Wang",
     role: "",
-    bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Prof. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and adjunct associate professor in management at CUHK, she mentors C-suite leaders and women executives globally. ",
+    bio: "With around 30 years in renown global organizations including senior executive leadership roles at IBM, DuPont, and HAVI, Prof. Wang brings deep expertise in transformation, talent strategy, and cross-cultural leadership. Now a professional executive coach and an Associate Professor of Practice in Management with CUHK Business School, she mentors C-suite leaders and women executives globally.",
     image:
       "https://static.wixstatic.com/media/fc0576_3bd63deeb7e14b98aa7ef01df377a56b~mv2.jpg/v1/fill/w_914,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-26%20at%205_40_edited.jpg",
   },
