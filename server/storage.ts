@@ -2,7 +2,8 @@ import {
   users, type User, type InsertUser,
   applications, type Application, type InsertApplication,
   contacts, type Contact, type InsertContact,
-  nominations, type Nomination, type InsertNomination
+  nominations, type Nomination, type InsertNomination,
+  ventures, type Venture, type InsertVenture
 } from "@shared/schema";
 
 // Storage interface
@@ -29,6 +30,13 @@ export interface IStorage {
   getAllNominations(): Promise<Nomination[]>;
   createNomination(nomination: InsertNomination): Promise<Nomination>;
   updateNominationStatus(id: number, status: string): Promise<Nomination | undefined>;
+  
+  // Venture methods
+  getVenture(id: number): Promise<Venture | undefined>;
+  getVentureBySlug(slug: string): Promise<Venture | undefined>;
+  getAllVentures(): Promise<Venture[]>;
+  createVenture(venture: InsertVenture): Promise<Venture>;
+  createVentures(ventures: InsertVenture[]): Promise<Venture[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -36,22 +44,26 @@ export class MemStorage implements IStorage {
   private applications: Map<number, Application>;
   private contacts: Map<number, Contact>;
   private nominations: Map<number, Nomination>;
+  private ventures: Map<number, Venture>;
   
   private userId: number;
   private applicationId: number;
   private contactId: number;
   private nominationId: number;
+  private ventureId: number;
 
   constructor() {
     this.users = new Map();
     this.applications = new Map();
     this.contacts = new Map();
     this.nominations = new Map();
+    this.ventures = new Map();
     
     this.userId = 1;
     this.applicationId = 1;
     this.contactId = 1;
     this.nominationId = 1;
+    this.ventureId = 1;
   }
 
   // User methods
@@ -89,6 +101,9 @@ export class MemStorage implements IStorage {
       id,
       createdAt: now,
       status: "pending",
+      ventureName: insertApplication.ventureName || null,
+      teamMembers: insertApplication.teamMembers || null,
+      hearAbout: insertApplication.hearAbout || null,
       resumeFilename: insertApplication.resumeFilename || null
     };
     this.applications.set(id, application);
@@ -173,6 +188,42 @@ export class MemStorage implements IStorage {
     };
     this.nominations.set(id, updatedNomination);
     return updatedNomination;
+  }
+  
+  // Venture methods
+  async getVenture(id: number): Promise<Venture | undefined> {
+    return this.ventures.get(id);
+  }
+  
+  async getVentureBySlug(slug: string): Promise<Venture | undefined> {
+    return Array.from(this.ventures.values()).find(
+      (venture) => venture.slug === slug,
+    );
+  }
+  
+  async getAllVentures(): Promise<Venture[]> {
+    return Array.from(this.ventures.values());
+  }
+  
+  async createVenture(insertVenture: InsertVenture): Promise<Venture> {
+    const id = this.ventureId++;
+    const now = new Date();
+    const venture: Venture = {
+      ...insertVenture,
+      id,
+      createdAt: now
+    };
+    this.ventures.set(id, venture);
+    return venture;
+  }
+  
+  async createVentures(insertVentures: InsertVenture[]): Promise<Venture[]> {
+    const createdVentures: Venture[] = [];
+    for (const insertVenture of insertVentures) {
+      const venture = await this.createVenture(insertVenture);
+      createdVentures.push(venture);
+    }
+    return createdVentures;
   }
 }
 

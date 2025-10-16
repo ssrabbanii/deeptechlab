@@ -57,6 +57,7 @@ The database schema is defined using Drizzle ORM and includes tables for:
 2. **Applications**: Program applications from candidates
 3. **Contacts**: Contact form submissions
 4. **Nominations**: Partner nominations for ventures
+5. **Ventures**: Portfolio companies from program alumni with details including name, website, cohort, value proposition, tech IP, founders' background, and stakeholder seeking information
 
 The schema uses typed interfaces with Zod validation for data integrity.
 
@@ -115,6 +116,7 @@ The schema uses typed interfaces with Zod validation for data integrity.
 - **Database ORM**: Drizzle
 - **Database**: PostgreSQL (via Neon Serverless)
 - **File Uploads**: multer
+- **CSV Parsing**: csv-parse for bulk data uploads
 - **Types**: Zod for validation schemas
 
 ## Deployment Strategy
@@ -134,6 +136,36 @@ The application is configured for deployment on Replit with:
    - DATABASE_URL: Connection string for PostgreSQL
 
 The deployment workflow is defined in the .replit file, which runs the development server during development and the production build for deployment.
+
+## Recent Changes (October 2025)
+
+### Ventures Section Added
+A new Ventures section has been added to showcase portfolio companies from program alumni:
+
+1. **Ventures Page** (`/ventures`): Displays a grid of portfolio companies sorted alphabetically
+2. **Venture Detail Page** (`/ventures/:slug`): Individual venture pages with comprehensive information
+3. **Admin Upload Page** (`/uploadcompanies`): Hidden admin page for bulk uploading ventures via CSV/Excel files
+
+**Features:**
+- Grid display of ventures with name and value proposition
+- Individual venture pages showing detailed information:
+  - Website (clickable link)
+  - HKDTL Cohort
+  - University KTO
+  - Value Proposition
+  - Tech IP
+  - Founders' Background
+  - Seeking Stakeholders (with checkboxes)
+  - Why Now section
+- CSV/Excel bulk upload functionality for admin users
+- Automatic slug generation from venture names for URLs
+
+**Technical Implementation:**
+- Added `ventures` table to database schema with fields for all venture information
+- Created storage interface methods for CRUD operations on ventures
+- Implemented API endpoints: GET `/api/ventures`, GET `/api/ventures/:slug`, POST `/api/ventures/upload`
+- Uses csv-parse library for parsing uploaded CSV files
+- Integrated with existing TanStack Query for data fetching and caching
 
 ## Getting Started
 

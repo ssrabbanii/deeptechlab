@@ -7,8 +7,21 @@ import fs from "fs";
 import { 
   insertApplicationSchema, 
   insertContactSchema,
-  insertNominationSchema
+  insertNominationSchema,
+  insertVentureSchema,
+  type InsertVenture
 } from "../shared/schema";
+import { parse } from "csv-parse/sync";
+
+// Helper function to generate slug from venture name
+function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Configure multer for file uploads
@@ -135,6 +148,122 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(404).json({ error: "Syllabus not found" });
     }
   });
+
+  // Ventures routes
+  // Get all ventures
+  app.get("/api/ventures", async (req: Request, res: Response) => {
+    try {
+      const ventures = await storage.getAllVentures();
+      res.status(200).json(ventures);
+    } catch (error) {
+      console.error("Error fetching ventures:", error);
+      res.status(500).json({ message: "Failed to fetch ventures" });
+    }
+  });
+
+  // Get venture by slug
+  app.get("/api/ventures/:slug", async (req: Request, res: Response) => {
+    try {
+      const { slug } = req.params;
+      const venture = await storage.getVentureBySlug(slug);
+      
+      if (!venture) {
+        return res.status(404).json({ message: "Venture not found" });
+      }
+      
+      res.status(200).json(venture);
+    } catch (error) {
+      console.error("Error fetching venture:", error);
+      res.status(500).json({ message: "Failed to fetch venture" });
+    }
+  });
+
+  // Upload ventures from CSV file
+  const csvUpload = multer({
+    dest: 'uploads/',
+    limits: {
+      fileSize: 10 * 1024 * 1024, // 10MB limit
+    },
+    fileFilter: (req, file, cb) => {
+      const allowedTypes = ['text/csv'];
+      
+      if (allowedTypes.includes(file.mimetype) || file.originalname.endsWith('.csv')) {
+        cb(null, true);
+      } else {
+        cb(new Error('Invalid file type. Only CSV files are allowed.'));
+      }
+    }
+  });
+
+  app.post("/api/ventures/upload", 
+    csvUpload.single('file'),
+    async (req: Request, res: Response) => {
+      try {
+        if (!req.file) {
+          return res.status(400).send("No file uploaded");
+        }
+
+        const fileContent = fs.readFileSync(req.file.path, 'utf-8');
+        
+        const records = parse(fileContent, {
+          columns: true,
+          skip_empty_lines: true,
+          trim: true
+        });
+
+        const ventures: InsertVenture[] = [];
+        const errors: string[] = [];
+        
+        for (let i = 0; i < (records as any[]).length; i++) {
+          const record = (records as any[])[i];
+          
+          try {
+            const seekingStakeholders = record['Seeking Stakeholders']
+              ? record['Seeking Stakeholders'].split(',').map((s: string) => s.trim().toLowerCase())
+              : [];
+
+            const ventureData = {
+              name: record['Venture Name'],
+              slug: generateSlug(record['Venture Name']),
+              website: record['Website'],
+              cohort: record['HKDTL Cohort'],
+              universityKTO: record['University KTO'],
+              valueProposition: record['Venture Value Proposition'],
+              techIP: record['Tech IP'],
+              foundersBackground: record['Founders Background'],
+              seekingStakeholders,
+              whyNow: record['Why Now']
+            };
+
+            // Validate the venture data
+            const validatedVenture = insertVentureSchema.parse(ventureData);
+            ventures.push(validatedVenture);
+          } catch (error) {
+            errors.push(`Row ${i + 1}: ${error instanceof Error ? error.message : 'Invalid data'}`);
+          }
+        }
+
+        if (errors.length > 0) {
+          // Clean up uploaded file
+          fs.unlinkSync(req.file.path);
+          return res.status(400).send(`Validation errors:\n${errors.join('\n')}`);
+        }
+
+        const createdVentures = await storage.createVentures(ventures);
+        
+        // Clean up uploaded file
+        fs.unlinkSync(req.file.path);
+
+        res.status(201).json({
+          message: "Ventures uploaded successfully",
+          count: createdVentures.length
+        });
+      } catch (error) {
+        console.error("Error uploading ventures:", error);
+        res.status(400).send(error instanceof Error ? error.message : "Error processing file");
+      }
+    }
+  );
 
   // Security and SEO files
   app.get("/robots.txt", (req: Request, res: Response) => {

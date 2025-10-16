@@ -87,3 +87,27 @@ export const insertNominationSchema = createInsertSchema(nominations).omit({
 
 export type InsertNomination = z.infer<typeof insertNominationSchema>;
 export type Nomination = typeof nominations.$inferSelect;
+
+// Ventures table
+export const ventures = pgTable("ventures", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  slug: text("slug").notNull().unique(),
+  website: text("website").notNull(),
+  cohort: text("cohort").notNull(),
+  universityKTO: text("university_kto").notNull(),
+  valueProposition: text("value_proposition").notNull(),
+  techIP: text("tech_ip").notNull(),
+  foundersBackground: text("founders_background").notNull(),
+  seekingStakeholders: text("seeking_stakeholders").array().notNull(),
+  whyNow: text("why_now").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertVentureSchema = createInsertSchema(ventures).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertVenture = z.infer<typeof insertVentureSchema>;
+export type Venture = typeof ventures.$inferSelect;

@@ -75,6 +75,7 @@ const Navbar = () => {
       label: "Schedule",
       sectionId: "schedule",
     },
+    { href: "/ventures", label: "Ventures", sectionId: null },
     { href: isHomePage ? "#faq" : "/faq", label: "FAQs", sectionId: "faq" },
     {
       href: isHomePage ? "#contact" : "/contact",

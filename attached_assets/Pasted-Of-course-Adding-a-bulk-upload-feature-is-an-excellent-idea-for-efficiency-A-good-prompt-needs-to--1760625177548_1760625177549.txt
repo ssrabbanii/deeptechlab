@@ -1,0 +1,61 @@
+Of course. Adding a bulk-upload feature is an excellent idea for efficiency. A good prompt needs to be very specific about the backend process, especially how the data from the file columns maps to the website's content fields.
+
+Here is the updated, more comprehensive prompt that includes the new `/uploadcompanies` page and its functionality.
+
+-----
+
+### The Complete Prompt to Use
+
+You can copy and paste the following text into your AI website builder:
+
+```
+I need to add a new "Ventures" section to my existing website and an admin page to upload new companies. Please follow these four steps:
+
+**1. Update the Navigation Bar:**
+Add a new link to the main navigation bar. The text for this link should be "Ventures".
+
+**2. Create the Main Ventures Page:**
+When a user clicks on the "Ventures" link in the navigation bar, it should take them to a new page at the URL `/ventures`. This page should have the following features:
+* A main heading that says "Our Ventures".
+* Below the heading, display a grid of portfolio companies.
+* Each company must be displayed in a modern, clean "card" style.
+* Each card should show the venture's name and a brief one-sentence value proposition.
+* The cards must be sorted alphabetically by the venture's name.
+* Each entire card must be a clickable link that navigates to that specific venture's detail page.
+
+**3. Create a Template for Individual Venture Pages:**
+When a user clicks on any venture card, it should open a new page dedicated to that specific venture (e.g., /ventures/venture-name). Create a template for these pages that includes the following sections and information fields. Use the "Nexodata" information below as the example content for the template.
+
+---
+**Venture Name:** (e.g., Nexodata)
+**Website:** (e.g., www.nexodata.io - this should be a clickable link)
+**HKDTL Cohort:** (e.g., 2023-24)
+**University KTO:** (e.g., Chinese University of Hong Kong)
+**Venture Value Proposition:** (A paragraph of text)
+**Tech IP:** (A text block for IP status)
+**Founders' Background:** (A text block for founder bios)
+**Seeking Stakeholders:**
+* Implement an interactive section with checkboxes for: [ ] Investors, [ ] Customers, [ ] Distribution Partners, [ ] Tech Partners, [ ] Hiring.
+* Below the checkboxes, display a text line that lists out only the selected options. For example: "Seeking: Investors / Customers".
+**Why Now?** (A text block for a short phrase)
+---
+
+**4. Create an Admin Page for Bulk Uploading Companies:**
+Create a new, hidden page at the URL `/uploadcompanies`. This page should not be visible in the main navigation bar. This page will be used to upload company data in bulk.
+
+* **Frontend UI:**
+    * The page should have a clear heading like "Upload Company Data".
+    * Include a file input field that allows an admin to select a CSV or Excel file from their computer.
+    * Add an "Upload" button to submit the file.
+
+* **Backend Logic:**
+    * When the file is uploaded, the backend must be able to parse the data from the CSV or Excel file.
+    * The backend should expect the file to have the following column headers: `Venture Name`, `Website`, `HKDTL Cohort`, `University KTO`, `Venture Value Proposition`, `Tech IP`, `Founders Background`, `Seeking Stakeholders`, `Why Now`.
+    * For **each row** of data in the file, the system must automatically:
+        1.  Create a new, individual venture page using the template from Step 3, populating it with the data from that row.
+        2.  Add a new corresponding venture card to the main `/ventures` page (from Step 2).
+        3.  Ensure the new card on the `/ventures` page links correctly to the newly created individual venture page.
+    * After the upload process is complete, display a success message on the `/uploadcompanies` page, such as "Successfully uploaded and created [X] new company pages." If there's an error, it should report the issue (e.g., "Error: File format is incorrect. Please check the column headers.").
+
+Please generate these pages and link them together as described.
+```

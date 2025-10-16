@@ -9,6 +9,9 @@ import Schedule from "@/pages/Schedule";
 import Apply from "@/pages/Apply";
 import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
+import Ventures from "@/pages/Ventures";
+import VentureDetail from "@/pages/VentureDetail";
+import UploadCompanies from "@/pages/UploadCompanies";
 import NotFound from "@/pages/not-found";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
@@ -28,6 +31,9 @@ function App() {
           <Route path="/apply" component={Apply} />
           {/* <Route path="/faq" component={FAQ} />
           <Route path="/contact" component={Contact} /> */}
+          <Route path="/ventures" component={Ventures} />
+          <Route path="/ventures/:slug" component={VentureDetail} />
+          <Route path="/uploadcompanies" component={UploadCompanies} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
