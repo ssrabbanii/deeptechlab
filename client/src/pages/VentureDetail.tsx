@@ -142,7 +142,7 @@ const VentureDetail = () => {
                 <div className="p-3 bg-orange-100 rounded-lg">
                   <Lightbulb className="h-6 w-6 text-orange-600" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900">
+                <h3 className="font-heading text-sm font-semibold text-gray-500 uppercase">
                   Venture Value Proposition
                 </h3>
               </div>
@@ -159,7 +159,7 @@ const VentureDetail = () => {
                 <div className="p-3 bg-indigo-100 rounded-lg">
                   <Zap className="h-6 w-6 text-indigo-600" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900">
+                <h3 className="font-heading text-sm font-semibold text-gray-500 uppercase">
                   Tech IP
                 </h3>
               </div>
@@ -176,7 +176,7 @@ const VentureDetail = () => {
                 <div className="p-3 bg-rose-100 rounded-lg">
                   <Users className="h-6 w-6 text-rose-600" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900">
+                <h3 className="font-heading text-sm font-semibold text-gray-500 uppercase">
                   Founders' Background
                 </h3>
               </div>
@@ -193,7 +193,7 @@ const VentureDetail = () => {
                 <div className="p-3 bg-teal-100 rounded-lg">
                   <Target className="h-6 w-6 text-teal-600" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900">
+                <h3 className="font-heading text-sm font-semibold text-gray-500 uppercase">
                   Seeking Stakeholders
                 </h3>
               </div>
@@ -234,7 +234,7 @@ const VentureDetail = () => {
                 <div className="p-3 bg-yellow-100 rounded-lg">
                   <Zap className="h-6 w-6 text-yellow-600" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900">
+                <h3 className="font-heading text-sm font-semibold text-gray-500 uppercase">
                   Why Now?
                 </h3>
               </div>
