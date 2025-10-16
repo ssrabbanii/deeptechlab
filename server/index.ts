@@ -1,6 +1,27 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { storage } from "./storage";
+
+// Initialize sample venture data
+async function initializeSampleData() {
+  const existingVentures = await storage.getAllVentures();
+  if (existingVentures.length === 0) {
+    await storage.createVenture({
+      name: "Nexodata",
+      slug: "nexodata",
+      website: "www.nexodata.io",
+      cohort: "2023-24",
+      universityKTO: "Chinese University of Hong Kong",
+      valueProposition: "Nexodata provides AI-powered data analytics for deep-tech ventures to unlock insights from complex datasets and accelerate innovation through intelligent automation and predictive modeling.",
+      techIP: "Patented machine learning algorithms for real-time data processing and analysis. Proprietary neural network architecture for edge computing applications.",
+      foundersBackground: "Founded by PhD researchers from CUHK with 10+ years combined experience in AI/ML and data science. Team includes former tech leads from major AI companies.",
+      seekingStakeholders: ["investors", "customers", "tech"],
+      whyNow: "Market demand for real-time analytics has reached critical mass. GPU processing costs have dropped 80% making AI accessible to SMEs."
+    });
+    log("Initialized sample venture data: Nexodata");
+  }
+}
 
 const app = express();
 
@@ -90,6 +111,9 @@ app.use((req, res, next) => {
 
 (async () => {
   const server = await registerRoutes(app);
+
+  // Initialize sample data
+  await initializeSampleData();
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
