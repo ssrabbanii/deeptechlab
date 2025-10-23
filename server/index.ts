@@ -2,24 +2,52 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import { storage } from "./storage";
+import { readFileSync } from "fs";
+import { parse } from "csv-parse/sync";
+import path from "path";
 
-// Initialize sample venture data
+// Initialize venture data from CSV
 async function initializeSampleData() {
   const existingVentures = await storage.getAllVentures();
   if (existingVentures.length === 0) {
-    await storage.createVenture({
-      name: "Nexodata",
-      slug: "nexodata",
-      website: "www.nexodata.io",
-      cohort: "2023-24",
-      universityKTO: "Chinese University of Hong Kong",
-      valueProposition: "Nexodata provides AI-powered data analytics for deep-tech ventures to unlock insights from complex datasets and accelerate innovation through intelligent automation and predictive modeling.",
-      techIP: "Patented machine learning algorithms for real-time data processing and analysis. Proprietary neural network architecture for edge computing applications.",
-      foundersBackground: "Founded by PhD researchers from CUHK with 10+ years combined experience in AI/ML and data science. Team includes former tech leads from major AI companies.",
-      seekingStakeholders: ["investors", "customers", "tech"],
-      whyNow: "Market demand for real-time analytics has reached critical mass. GPU processing costs have dropped 80% making AI accessible to SMEs."
-    });
-    log("Initialized sample venture data: Nexodata");
+    try {
+      const csvPath = path.join(process.cwd(), "ventures-data.csv");
+      const fileContent = readFileSync(csvPath, "utf-8");
+      const records = parse(fileContent, {
+        columns: true,
+        skip_empty_lines: true,
+        trim: true,
+      });
+
+      let count = 0;
+      for (const record of records as any[]) {
+        const slug = record["Venture Name"]
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+
+        const seekingStakeholders = record["Seeking Stakeholders"]
+          ? record["Seeking Stakeholders"].split(",").map((s: string) => s.trim())
+          : [];
+
+        await storage.createVenture({
+          name: record["Venture Name"],
+          slug: slug,
+          website: record["Website"],
+          cohort: record["HKDTL Cohort"],
+          universityKTO: record["University KTO"],
+          valueProposition: record["Venture Value Proposition"],
+          techIP: record["Tech IP"],
+          foundersBackground: record["Founders Background"],
+          seekingStakeholders: seekingStakeholders,
+          whyNow: record["Why Now"],
+        });
+        count++;
+      }
+      log(`Initialized ${count} ventures from CSV file`);
+    } catch (error) {
+      log(`Error initializing ventures from CSV: ${error}`);
+    }
   }
 }
 
