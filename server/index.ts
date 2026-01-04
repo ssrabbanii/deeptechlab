@@ -57,20 +57,20 @@ const app = express();
 app.use((req, res, next) => {
   // Prevent clickjacking attacks
   res.setHeader('X-Frame-Options', 'DENY');
-  
+
   // Prevent MIME type sniffing
   res.setHeader('X-Content-Type-Options', 'nosniff');
-  
+
   // Enable XSS protection
   res.setHeader('X-XSS-Protection', '1; mode=block');
-  
+
   // Referrer policy
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-  
+
   // Content Security Policy - Development-friendly configuration
-  if (app.get("env") === "development") {
+  if (process.env.NODE_ENV !== "production") {
     // More permissive CSP for development (Vite needs inline scripts)
-    res.setHeader('Content-Security-Policy', 
+    res.setHeader('Content-Security-Policy',
       "default-src 'self'; " +
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://replit.com; " +
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
@@ -83,7 +83,7 @@ app.use((req, res, next) => {
     );
   } else {
     // Strict CSP for production (external scripts only)
-    res.setHeader('Content-Security-Policy', 
+    res.setHeader('Content-Security-Policy',
       "default-src 'self'; " +
       "script-src 'self' https://kit.fontawesome.com https://ka-f.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; " +
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com https://cdnjs.cloudflare.com; " +
@@ -95,12 +95,12 @@ app.use((req, res, next) => {
       "base-uri 'self';"
     );
   }
-  
+
   // Permissions policy
-  res.setHeader('Permissions-Policy', 
+  res.setHeader('Permissions-Policy',
     'camera=(), microphone=(), geolocation=(), payment=()'
   );
-  
+
   next();
 });
 
@@ -154,21 +154,17 @@ app.use((req, res, next) => {
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
+  const isDevelopment = process.env.NODE_ENV !== "production";
+  if (isDevelopment) {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // Serve the app on port 3000 (changed from 5000 to avoid macOS AirPlay conflict)
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
+  const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+  server.listen(port, "0.0.0.0", () => {
     log(`serving on port ${port}`);
   });
 })();
