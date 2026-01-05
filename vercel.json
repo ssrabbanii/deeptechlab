@@ -8,7 +8,14 @@
         "distDir": "dist/public"
       }
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
+
 
 
