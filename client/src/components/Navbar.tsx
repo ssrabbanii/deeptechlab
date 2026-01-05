@@ -50,6 +50,7 @@ const Navbar = () => {
 
   const navigationItems = [
     { href: isHomePage ? "#home" : "/", label: "Home", sectionId: "home" },
+    { href: "/info-session", label: "Info Session", sectionId: null, highlight: true },
     {
       href: isHomePage ? "#about" : "/about",
       label: "About",
@@ -99,16 +100,29 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center space-x-6">
+        <ul className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {navigationItems.map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
-                className="nav-link text-gray-700 hover:text-primary font-medium"
-                onClick={(e) => item.sectionId ? handleNavigation(e, item.sectionId) : closeMobileMenu()}
-              >
-                {item.label}
-              </a>
+              {item.sectionId ? (
+                <a
+                  href={item.href}
+                  className="nav-link text-gray-700 hover:text-primary font-medium"
+                  onClick={(e) => handleNavigation(e, item.sectionId)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  className={`nav-link font-medium ${(item as any).highlight
+                    ? "text-primary font-semibold border-b-2 border-primary pb-1"
+                    : "text-gray-700 hover:text-primary"
+                    }`}
+                  onClick={closeMobileMenu}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -144,13 +158,26 @@ const Navbar = () => {
           <ul className="space-y-3 pb-3">
             {navigationItems.map((item) => (
               <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="block py-2 text-gray-700 hover:text-primary font-medium"
-                  onClick={(e) => item.sectionId ? handleNavigation(e, item.sectionId) : closeMobileMenu()}
-                >
-                  {item.label}
-                </a>
+                {item.sectionId ? (
+                  <a
+                    href={item.href}
+                    className="block py-2 text-gray-700 hover:text-primary font-medium"
+                    onClick={(e) => handleNavigation(e, item.sectionId)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`block py-2 font-medium ${(item as any).highlight
+                      ? "text-primary font-semibold"
+                      : "text-gray-700 hover:text-primary"
+                      }`}
+                    onClick={closeMobileMenu}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li>

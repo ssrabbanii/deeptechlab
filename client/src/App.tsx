@@ -12,6 +12,7 @@ import Contact from "@/pages/Contact";
 import Ventures from "@/pages/Ventures";
 import VentureDetail from "@/pages/VentureDetail";
 import UploadCompanies from "@/pages/UploadCompanies";
+import InfoSession from "@/pages/InfoSession";
 import NotFound from "@/pages/not-found";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/ventures" component={Ventures} />
           <Route path="/ventures/:slug" component={VentureDetail} />
           <Route path="/uploadcompanies" component={UploadCompanies} />
+          <Route path="/info-session" component={InfoSession} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
