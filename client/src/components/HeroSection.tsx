@@ -16,9 +16,9 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
             <div className="mb-4">
-              <img 
-                src={weAreHiringImage} 
-                alt="We're Hiring" 
+              <img
+                src={weAreHiringImage}
+                alt="We're Hiring"
                 className="w-32 h-auto mb-2 animate-pulse"
               />
             </div>
@@ -40,7 +40,7 @@ const HeroSection = () => {
                   Apply Now
                 </Button>
               </Link>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 className="bg-white bg-opacity-20 hover:bg-opacity-30 border border-white px-6 py-6 rounded-md font-heading font-semibold text-base transition-all text-white h-auto"
                 onClick={() => {
@@ -49,13 +49,13 @@ const HeroSection = () => {
                 }}
               >
                 Test Analytics
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="order-1 md:order-2">
-            <img 
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800" 
-              alt="Tech leadership workshop with diverse professionals" 
+            <img
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800"
+              alt="Tech leadership workshop with diverse professionals"
               className="rounded-xl shadow-xl w-full"
             />
           </div>
