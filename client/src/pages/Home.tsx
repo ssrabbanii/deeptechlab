@@ -9,11 +9,21 @@ import ApplicationSection from "@/components/ApplicationSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import { useEffect } from "react";
+import { scrollToSection } from "@/lib/utils";
 
 const Home = () => {
   useEffect(() => {
     document.title =
       "C-Suite Leadership Development Program | Deep-Tech Ventures";
+
+    // Handle hash navigation when page loads
+    const hash = window.location.hash.slice(1); // Remove the #
+    if (hash) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        scrollToSection(hash);
+      }, 100);
+    }
   }, []);
 
   return (

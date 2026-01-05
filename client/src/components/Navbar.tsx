@@ -20,14 +20,20 @@ const Navbar = () => {
   // Check if we're on homepage
   const isHomePage = location === "/";
 
-  // Handle navigation depending on whether we're on homepage or not
+  // Handle navigation - always scroll to homepage sections
   const handleNavigation = (
     e: React.MouseEvent<HTMLAnchorElement>,
     sectionId: string | null,
   ) => {
-    if (isHomePage && sectionId) {
+    if (sectionId) {
       e.preventDefault();
-      scrollToSection(sectionId);
+      if (isHomePage) {
+        // Already on homepage, just scroll
+        scrollToSection(sectionId);
+      } else {
+        // Not on homepage, navigate to homepage first, then scroll
+        window.location.href = `/#${sectionId}`;
+      }
       closeMobileMenu();
     } else {
       closeMobileMenu();
@@ -52,34 +58,34 @@ const Navbar = () => {
     { href: isHomePage ? "#home" : "/", label: "Home", sectionId: "home" },
     { href: "/info-session", label: "Info Session", sectionId: null, highlight: true },
     {
-      href: isHomePage ? "#about" : "/about",
+      href: "#about",
       label: "About",
       sectionId: "about",
     },
     {
-      href: isHomePage ? "#participants" : "/for-participants",
+      href: "#participants",
       label: "For Participants",
       sectionId: "participants",
     },
     {
-      href: isHomePage ? "#partners" : "/for-partners",
+      href: "#partners",
       label: "For Partners",
       sectionId: "partners",
     },
     {
-      href: isHomePage ? "#faculty" : "/faculty",
+      href: "#faculty",
       label: "Faculty",
       sectionId: "faculty",
     },
     {
-      href: isHomePage ? "#schedule" : "/schedule",
+      href: "#schedule",
       label: "Schedule",
       sectionId: "schedule",
     },
     { href: "/ventures", label: "Ventures", sectionId: null },
-    { href: isHomePage ? "#faq" : "/faq", label: "FAQs", sectionId: "faq" },
+    { href: "#faq", label: "FAQs", sectionId: "faq" },
     {
-      href: isHomePage ? "#contact" : "/contact",
+      href: "#contact",
       label: "Contact",
       sectionId: "contact",
     },
@@ -129,8 +135,8 @@ const Navbar = () => {
 
         <div className="flex items-center space-x-3">
           <Link
-            href={isHomePage ? "#apply" : "/apply"}
-            onClick={(e) => isHomePage && handleNavigation(e, "apply")}
+            href="#apply"
+            onClick={(e) => handleNavigation(e, "apply")}
           >
             <Button className="hidden sm:block bg-gradient-to-r from-primary to-purple-700 hover:from-purple-700 hover:to-primary text-white font-medium transition-all hover:shadow-lg">
               Apply Now
@@ -181,14 +187,14 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <Link
-                href={isHomePage ? "#apply" : "/apply"}
-                onClick={(e) => isHomePage && handleNavigation(e, "apply")}
+              <a
+                href="#apply"
+                onClick={(e) => handleNavigation(e, "apply")}
               >
                 <Button className="w-full bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md font-medium text-center">
                   Apply Now
                 </Button>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -6,14 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ExternalLink, ArrowLeft, Building2, Globe, Users, Lightbulb, Zap, Target } from "lucide-react";
 import type { Venture } from "@shared/schema";
+import { fetchVentureBySlugWithApiFallback } from "@/lib/venturesFromCsv";
 
 const VentureDetail = () => {
   const [match, params] = useRoute("/ventures/:slug");
   const slug = params?.slug;
 
-  const { data: venture, isLoading } = useQuery<Venture>({
-    queryKey: [`/api/ventures/${slug}`],
+  const { data: venture, isLoading } = useQuery<Venture | null>({
+    queryKey: ["venture", slug],
     enabled: !!slug,
+    queryFn: () => fetchVentureBySlugWithApiFallback(slug as string),
   });
 
   useEffect(() => {
@@ -218,7 +220,7 @@ const VentureDetail = () => {
               {venture.seekingStakeholders.length > 0 && (
                 <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-primary p-6 rounded-lg">
                   <p className="font-semibold text-gray-900 text-lg" data-testid="text-seeking-summary">
-                    Seeking: {venture.seekingStakeholders.map(id => 
+                    Seeking: {venture.seekingStakeholders.map(id =>
                       stakeholderOptions.find(opt => opt.id === id)?.label
                     ).filter(Boolean).join(' / ')}
                   </p>

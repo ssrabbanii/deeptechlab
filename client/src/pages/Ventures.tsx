@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Sparkles, TrendingUp, Rocket } from "lucide-react";
 import type { Venture } from "@shared/schema";
+import { fetchVenturesWithApiFallback } from "@/lib/venturesFromCsv";
 
 const Ventures = () => {
   useEffect(() => {
@@ -12,7 +13,8 @@ const Ventures = () => {
   }, []);
 
   const { data: ventures, isLoading } = useQuery<Venture[]>({
-    queryKey: ["/api/ventures"],
+    queryKey: ["ventures"],
+    queryFn: fetchVenturesWithApiFallback,
   });
 
   const sortedVentures = ventures
@@ -44,7 +46,7 @@ const Ventures = () => {
             </h1>
           </div>
           <p className="text-xl text-white/95 max-w-3xl leading-relaxed">
-            Discover the innovative deep-tech ventures from our program alumni, 
+            Discover the innovative deep-tech ventures from our program alumni,
             <span className="font-semibold"> building the future of technology and innovation</span>.
           </p>
           <div className="flex gap-6 mt-8">
