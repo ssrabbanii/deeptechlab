@@ -115,7 +115,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className={`nav-link font-medium ${(item as any).highlight
-                    ? "text-primary font-semibold border-b-2 border-primary pb-1"
+                    ? "text-primary font-semibold"
                     : "text-gray-700 hover:text-primary"
                     }`}
                   onClick={closeMobileMenu}
