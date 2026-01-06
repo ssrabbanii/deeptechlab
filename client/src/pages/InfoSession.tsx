@@ -8,10 +8,8 @@ const InfoSession = () => {
     document.title = "Deep-Tech Lab Accelerator Info Session | 14 January 2026";
   }, []);
 
-  const handleGetZoomLink = () => {
-    // TODO: Replace with actual Zoom link for the Info Session
-    // Example: window.open('https://zoom.us/j/YOUR_MEETING_ID', '_blank');
-    window.open('https://zoom.us', '_blank');
+  const handleJoinMeeting = () => {
+    window.open('https://meet.google.com/pii-wgme-aqx', '_blank');
   };
 
   return (
@@ -33,16 +31,19 @@ const InfoSession = () => {
             <p className="text-xl md:text-2xl mb-6 opacity-90">
               A small-cohort venture-building accelerator designed to turn deep tech into real adoption—through government and university pathways, strategic capital co-builds, and proof of concept launches.
             </p>
-            <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-6 inline-block">
-              <p className="text-lg font-semibold">14 January 2026 · Zoom · Limited seats</p>
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-3 inline-block text-left">
+              <p className="text-lg font-semibold">Join the Deep-Tech Lab Accelerator Info Session</p>
+              <p className="text-base opacity-90">Wednesday, January 14 · 3:00 – 4:00pm</p>
+              <p className="text-base opacity-90">Time zone: Asia/Hong_Kong</p>
+              <p className="text-base opacity-90">Google Meet: https://meet.google.com/pii-wgme-aqx</p>
             </div>
-            <p className="text-lg mb-8 opacity-90">Maximum 6 ventures per cohort</p>
+            <p className="text-lg mb-8 opacity-90">Maximum 6 ventures per cohort · Limited seats</p>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Button
-                onClick={handleGetZoomLink}
+                onClick={handleJoinMeeting}
                 className="bg-accent hover:bg-amber-500 text-dark px-8 py-6 rounded-md font-heading font-semibold text-base transition-all hover:shadow-lg h-auto"
               >
-                Get the Zoom link
+                Join via Google Meet
               </Button>
               <Link href="/">
                 <Button
@@ -267,10 +268,10 @@ const InfoSession = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
-                onClick={handleGetZoomLink}
+                onClick={handleJoinMeeting}
                 className="bg-accent hover:bg-amber-500 text-dark px-8 py-6 rounded-md font-heading font-semibold text-base transition-all hover:shadow-lg h-auto"
               >
-                Get the Zoom link
+                Join via Google Meet
               </Button>
               <Link href="/">
                 <Button
