@@ -32,7 +32,7 @@ const InfoSession = () => {
               A small-cohort venture-building accelerator designed to turn deep tech into real adoption—through government and university pathways, strategic capital co-builds, and proof of concept launches.
             </p>
             <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-3 inline-block text-left">
-              <p className="text-lg font-semibold">Join the Deep-Tech Lab Accelerator Info Session</p>
+              <p className="text-lg font-semibold">Deep-Tech Lab Accelerator Info Session</p>
               <p className="text-base opacity-90">Wednesday, January 14 · 3:00 – 4:00pm</p>
               <p className="text-base opacity-90">Time zone: Asia/Hong_Kong</p>
               <p className="text-base opacity-90">Google Meet: https://meet.google.com/pii-wgme-aqx</p>
